@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>事業用不動産仲介会社の受注事例</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b2430; --sub:#5b6675; --line:#e3e7ec; --bg:#f6f7f9; --card:#fff;
+  --navy:#16325c; --accent:#e8661c; --accent-soft:#fff1e8; --ok:#1f8a5b; --ok-soft:#e8f6ef;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;font-size:16px}
+a{color:var(--navy)}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px}
+.topbar{background:var(--card);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:52px;font-size:14px}
+.topbar a{text-decoration:none;font-weight:700}
+.badge-internal{font-size:12px;color:var(--sub)}
+
+.hero{background:var(--navy);color:#fff;padding:40px 0 36px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tag{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.14)}
+.tag.won{background:var(--accent)}
+.hero h1{font-size:26px;line-height:1.5;margin:0 0 14px;font-weight:900}
+.hero p.lead{margin:0;color:#d7e0ee;font-size:15px}
+
+section{margin:36px 0}
+h2{font-size:20px;margin:0 0 16px;padding-left:12px;border-left:5px solid var(--accent);line-height:1.4}
+h3{font-size:16px;margin:0 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.muted{color:var(--sub);font-size:14px}
+.lead-txt{margin:0 0 14px}
+
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.summary .card h3{font-size:13px;color:var(--accent);letter-spacing:.05em}
+.summary .card p{margin:0;font-size:15px}
+
+table.prof{width:100%;border-collapse:collapse;font-size:15px}
+table.prof th{width:30%;text-align:left;color:var(--sub);font-weight:500;padding:8px 0;border-bottom:1px solid var(--line);vertical-align:top}
+table.prof td{padding:8px 0;border-bottom:1px solid var(--line)}
+
+/* 課題→AIOが刺さった理由 */
+.fit{display:flex;flex-direction:column;gap:12px}
+.fit-row{display:grid;grid-template-columns:1fr 36px 1.25fr;align-items:stretch}
+.fit-row .pain,.fit-row .hit{border-radius:10px;padding:14px 16px;font-size:15px}
+.fit-row .pain{background:var(--card);border:1px solid var(--line)}
+.fit-row .hit{background:var(--accent-soft);border:1px solid #f3c9ae}
+.fit-row .arrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:900;font-size:20px}
+.fit-row .lbl{display:block;font-size:12px;font-weight:700;color:var(--sub);margin-bottom:2px}
+.fit-row .hit .lbl{color:var(--accent)}
+.fit-row .src{display:block;font-size:12px;color:var(--sub);margin-top:6px}
+
+/* 会話ログ */
+.mtg{font-size:15px;font-weight:900;color:#fff;background:var(--navy);border-radius:8px;padding:6px 14px;margin:6px 0 4px}
+.mtg span{font-weight:500;font-size:13px;color:#c8d3e4;margin-left:8px}
+.talk{display:flex;flex-direction:column;gap:10px}
+.scene{font-size:13px;font-weight:700;color:var(--navy);background:#e9eef6;border-radius:6px;padding:4px 12px;margin-top:10px;align-self:flex-start}
+.scene .time{font-family:ui-monospace,Consolas,monospace;font-weight:500;margin-right:6px;color:var(--sub)}
+.msg{max-width:86%;border-radius:12px;padding:10px 14px;font-size:15px}
+.msg .who{display:block;font-size:12px;font-weight:700;margin-bottom:2px}
+.msg.s{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--navy)}
+.msg.s .who{color:var(--navy)}
+.msg.c{align-self:flex-end;background:#fff8f3;border:1px solid #f3c9ae;border-right:4px solid var(--accent)}
+.msg.c .who{color:var(--accent)}
+.why{margin-top:2px;font-size:14px;color:var(--ok);background:var(--ok-soft);border-radius:6px;padding:8px 12px}
+.why b{margin-right:4px}
+.why.turn{color:#fff;background:var(--accent)}
+.kw{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.kw span{font-size:13px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:1px 10px}
+
+.notsaid{border-left:5px solid var(--sub)}
+
+/* timeline */
+.timeline{position:relative;margin-left:8px;padding-left:28px;border-left:2px solid var(--line)}
+.step{position:relative;margin-bottom:16px}
+.step::before{content:"";position:absolute;left:-36px;top:6px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--navy)}
+.step.turn::before{background:var(--accent);border-color:var(--accent);width:18px;height:18px;left:-38px;top:4px}
+.step .meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12px;color:var(--sub);margin-bottom:4px}
+.step .time{font-family:ui-monospace,Consolas,monospace;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:0 6px}
+.temp{font-weight:700;border-radius:4px;padding:0 6px}
+.temp.t1{background:#eef1f5;color:#5b6675}
+.temp.t2{background:#fff6d6;color:#8a6a00}
+.temp.t3{background:var(--accent-soft);color:var(--accent)}
+.step h3{font-size:16px}
+.step .card{padding:14px 18px;font-size:15px}
+.step.turn .card{border:2px solid var(--accent)}
+.turn-label{display:inline-block;background:var(--accent);color:#fff;font-size:12px;font-weight:900;padding:2px 10px;border-radius:4px;margin-bottom:6px}
+.divider{font-size:13px;font-weight:900;color:var(--navy);margin:22px 0 10px -28px;padding-left:28px}
+
+.thermo{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;align-items:end;height:130px;margin:6px 0 4px}
+.thermo .bar{background:#d9dfe7;border-radius:6px 6px 0 0;position:relative}
+.thermo .bar.hot{background:var(--accent)}
+.thermo .bar span{position:absolute;top:-20px;left:0;right:0;text-align:center;font-size:11px;color:var(--sub)}
+.thermo-l{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;font-size:11px;color:var(--sub);text-align:center;line-height:1.4}
+
+.phr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.phr ol{margin:0;padding-left:1.3em}
+.phr li{margin:8px 0;font-size:15px}
+.phr li small{display:block;color:var(--sub);font-size:12px}
+
+table.obj{width:100%;border-collapse:collapse;font-size:15px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+table.obj th,table.obj td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+table.obj thead th{background:var(--bg);font-size:13px;color:var(--sub)}
+
+.tips .card{border-left:5px solid var(--ok)}
+.tips ol{margin:0;padding-left:1.3em}
+.tips li{margin:8px 0}
+
+.note{font-size:13px;color:var(--sub);border-top:1px solid var(--line);padding:20px 0 40px;margin-top:40px}
+
+@media (max-width:720px){
+  .hero h1{font-size:21px}
+  .summary,.phr{grid-template-columns:1fr}
+  .fit-row{grid-template-columns:1fr}
+  .fit-row .arrow{transform:rotate(90deg);height:28px}
+  .msg{max-width:100%}
+  .thermo,.thermo-l{gap:3px}
+  .thermo-l{font-size:10px}
+  table.prof th{width:38%}
+  table.obj thead{display:none}
+  table.obj td{display:block;border-bottom:none;padding:6px 14px}
+  table.obj tr{display:block;border-bottom:1px solid var(--line);padding:8px 0}
+}
+@media print{.topbar{display:none}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <a href="../index.html">← AIO受注事例集</a>
+  <span class="badge-internal">事例 No.05</span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="tags">
+    <span class="tag won">受注</span>
+    <span class="tag">不動産</span>
+    <span class="tag">大阪府</span>
+    <span class="tag">従業員 1〜5名</span>
+    <span class="tag">AIOマスター</span>
+  </div>
+  <h1>「依頼はまだ早い」から1時間で「圧倒的にAIOです」。<br>事業用不動産の仲介会社が、AIへの"壁打ち"の先に自社を置くと決めるまで</h1>
+  <p class="lead">大阪府の事業用不動産仲介会社（社員3名）。美容室など店舗の物件に強い。新たにオーナー向けのホームページを作り、SEOを始めたばかり。1回の打ち合わせで、SNSとAIOのうちAIOを選んで申し込んだ。</p>
+</div></header>
+
+<main class="wrap">
+
+<section>
+  <h2>3行でわかるこの事例</h2>
+  <div class="summary">
+    <div class="card"><h3>どんな課題</h3><p>物件を借りたい人はいくらでも見つかるが、物件（オーナー）の仕入れが追いつかない。一括査定サイトは費用ばかりかかって成約しなかった。</p></div>
+    <div class="card"><h3>どう刺さった</h3><p>「困ったらAIに壁打ちする。相続した不動産をどうするか相談した末に"どの業者に頼めば？"と聞く。そこに御社が出れば問い合わせに直結する」。代表が<strong>自分も壁打ちしている</strong>と気づいた。</p></div>
+    <div class="card"><h3>決め手</h3><p>一度は「まだ依頼は早い」と迷ったが、AIOはSEOと違って大手だけが勝つ仕組みではないこと、作ったばかりのオーナー向けHPを生かせることが伝わった。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>会社プロフィール</h2>
+  <div class="card">
+    <table class="prof">
+      <tr><th>所在地</th><td>大阪府</td></tr>
+      <tr><th>事業内容</th><td>事業用不動産（店舗・事務所）の賃貸仲介。美容室など店舗に強い</td></tr>
+      <tr><th>会社規模</th><td>社員3名（2024年設立）</td></tr>
+      <tr><th>商談相手</th><td>代表</td></tr>
+      <tr><th>集客の現状</th><td>ポータルと紹介が中心で、月の問い合わせは5件未満。8月にオーナー向けHPを外注で新設し、週1回のブログでSEOを開始。インスタはフォロワー約35名。公式LINEは問い合わせ用。AIOは未着手</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>どんな課題に、AIOマスターがどう刺さったか</h2>
+  <p class="lead-txt muted">左がお客様の課題、右がAIOマスターがその課題の答えとして受け止められた理由です。</p>
+  <div class="fit">
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 1</span>物件の仕入れが最大の壁。オーナー側とつながる手段がない。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>相続した不動産の活用に悩むオーナーは、AIに壁打ちした末に「どの業者に頼めばいい？」と聞く。そこに出れば、<strong>オーナーからの相談が直接来る</strong>。<span class="src">11:01〜11:02</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 2</span>一括査定サイトは、選ばれるたびに費用がかかるのに連絡がつかない。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>AIへの壁打ちを経たお客様は、相談内容が固まった状態で来るので<strong>受注率も高い</strong>。<span class="src">11:02</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 3</span>SEOを始めたが、上位の会社は広告費も時間もかけている。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>「SEOはお金と時間をかければ上がる。AIOはブラックボックスな部分がある。<strong>だからこそ中小にも勝ち筋がある</strong>」。<span class="src">10:44</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 4</span>せっかく作ったオーナー向けHPを生かし切れていない。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>「HPに何を足せばAIに拾ってもらえるか」を改善点として出せる。表示先も新しいオーナー向けHPに設定した。<span class="src">10:45、11:07</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>AIOマスターをどう説明したか（実際の会話）</h2>
+  <p class="lead-txt muted">この商談は1回で決まりましたが、途中で一度「まだ依頼は早い」と迷いが出ています。<strong>実演で現状を見せる→SEOとの違いを伝える→迷いには質問に答えるだけにする→代表自身の"壁打ち"の体験に重ねる</strong>という順番でした。</p>
+  <div class="card">
+    <div class="mtg">打ち合わせ<span>担当営業と代表／約70分</span></div>
+    <div class="talk">
+      <div class="scene"><span class="time">10:41</span>その場でChatGPTに聞く</div>
+      <div class="msg s"><span class="who">担当営業</span>（ChatGPTで）「大阪で美容室を開業するなら、おすすめの仲介会社は」。リアルに今出てくるのが、この業者さんたちなんです。</div>
+      <div class="msg c"><span class="who">代表</span>この会社、めちゃめちゃお金かけてるんですよ。びっくりするぐらい。</div>
+      <div class="msg s"><span class="who">担当営業</span>やっぱり、出てくるんですよね。</div>
+      <div class="scene"><span class="time">10:44</span>SEOとの違い</div>
+      <div class="msg s"><span class="who">担当営業</span>SEOは裏側のロジックがある程度決まっていて、極論、お金と時間をかければ上位に乗ってきます。AIOはブラックボックスな部分がある。良くも悪くもですが、だからこそ大手だけでなく中小にも勝ち筋があるんです。</div>
+      <div class="msg s"><span class="who">担当営業</span>AIがやっていることはシンプルで、ネット上の情報を探しに行って抽出しているだけ。御社がつながりたい人が検索しそうな言葉で調べたとき、御社の情報を拾ってもらえる導線を設計する。せっかくきれいなHPがあるので、何を足せばいいかを出していけます。</div>
+      <div class="scene"><span class="time">10:47</span>一度、迷いが出る</div>
+      <div class="msg c"><span class="who">代表</span>まだ土台がはっきり組み込まれていないと正直思っていて。依頼するのは早いんちゃうかな、と。</div>
+      <div class="msg c"><span class="who">代表</span>AIOって、ChatGPTにもGeminiにも、全部に上がってくるんですか。</div>
+      <div class="msg s"><span class="who">担当営業</span>基本的にはそうです。AIが探しに行っている場所は、基本的に同じなので。</div>
+      <div class="why"><b>ポイント</b>迷いに対して押し込まず、代表の質問（どのAIで使われるか、など）に一つずつ答えた。</div>
+      <div class="scene"><span class="time">11:01</span>壁打ちの先に、業者選びがある</div>
+      <div class="msg s"><span class="who">担当営業</span>皆さん、ピンポイントで調べることはあまりなくて、困ったらAIに壁打ちするんですよね。例えば相続で不動産を譲り受けた。駐車場がいいのか、アパート経営がいいのか。壁打ちした果てに「売却がいいですよ」となる。じゃあ、大阪でどの業者に頼めばいいの？と。そこに御社が乗ってきたら、問い合わせに間違いなくつながります。受注率も高くなる。</div>
+      <div class="msg c"><span class="who">代表</span>そう考えたら、私も壁打ちは結構するかもしれないですね。ビルに喫煙所を入れたいと聞いたら、使える補助制度まで全部教えてくれた。</div>
+      <div class="msg s"><span class="who">担当営業</span>不動産のことは皆さん分からない。でもいきなり相談すると、がっつり営業されると分かっている。だからAIに聞きたいんです。</div>
+      <div class="why turn"><b>★ 受注の流れに乗った瞬間</b>代表が「自分も壁打ちしている」と気づき、AIOが自分ごとになった。</div>
+      <div class="scene"><span class="time">11:03</span>決断</div>
+      <div class="msg s"><span class="who">担当営業</span>試す価値はありそうですか。</div>
+      <div class="msg c"><span class="who">代表</span>1回やってみたいっすね。</div>
+      <div class="msg s"><span class="who">担当営業</span>SNSとAIO、優先度はどちらですか。</div>
+      <div class="msg c"><span class="who">代表</span>圧倒的にAIOです。</div>
+      <div class="scene"><span class="time">11:07</span>何を表示させるか</div>
+      <div class="msg c"><span class="who">代表</span>正直、オーナーがほしいんです。オーナーの情報がほしいので、新しいほうのHPがいいかなと。</div>
+      <div class="msg s"><span class="who">担当営業</span>関係ない人がたくさん来ても対応しきれないので、新しいほうがむしろいいと思います。</div>
+    </div>
+  </div>
+
+  <div class="card notsaid" style="margin-top:12px">
+    <h3>価格の伝え方</h3>
+    <p style="margin:0;font-size:15px">普段は月額利用料＋掲載1件ごとの成果報酬（上限あり）で提供していることを正直に伝えたうえで、モニター条件（月額のみ）を案内しています。</p>
+    <p style="margin:8px 0 0;font-size:15px">あわせて「完成しきったツールではない。使っていただいて、ご意見で改善していきたい」と率直に伝えています。他社にも提案するなら埋もれるのでは、という質問には「AIの判断はブラックボックスで誰も操作できない。乗りやすい情報の出し方を支援するだけ」と答えました。</p>
+  </div>
+</section>
+
+<section>
+  <h2>商談の温度の変化（約70分）</h2>
+  <div class="card">
+    <div class="thermo" aria-hidden="true" style="grid-template-columns:repeat(8,1fr)">
+      <div class="bar" style="height:30%"><span>低</span></div>
+      <div class="bar" style="height:50%"></div>
+      <div class="bar" style="height:45%"></div>
+      <div class="bar" style="height:62%"></div>
+      <div class="bar" style="height:58%"></div>
+      <div class="bar" style="height:32%"></div>
+      <div class="bar hot" style="height:90%"><span>★</span></div>
+      <div class="bar hot" style="height:95%"><span>高</span></div>
+    </div>
+    <div class="thermo-l" style="grid-template-columns:repeat(8,1fr)">
+      <div>状況<br>確認</div><div>仕入れの<br>課題</div><div>SNSの<br>話</div><div>AI検索の<br>実演</div><div>SEOとの<br>違い</div><div>「まだ<br>早い」</div><div>壁打ちの<br>話</div><div>申込</div>
+    </div>
+    <p class="muted" style="margin:12px 0 0">★が「壁打ちの先に業者選びがある」の場面。一度「まだ早い」と下がったが、代表自身の体験に重なったことで一気に上がった。</p>
+  </div>
+</section>
+
+<section>
+  <h2>提案の流れ（この順番で話した）</h2>
+  <div class="timeline">
+
+    <div class="step">
+      <div class="meta"><span class="time">10:02〜10:05</span><span class="temp t1">温度：低</span></div>
+      <h3>1. 状況確認：オーナー向けHP、SEO、インスタ、LINE</h3>
+      <div class="card">オーナー向けのHPを新設してSEOを始めたばかり。AIOはまったく手をつけていないことを確認した。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">10:06〜10:16</span><span class="temp t2">温度：中</span></div>
+      <h3>2. 本当の課題は仕入れ（オーナー側）</h3>
+      <div class="card">「お客様はネットでいくらでも探せる。でも物件ありき」。一括査定サイトは費用ばかりかかったという失敗談も聞き切った。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">10:17〜10:40</span><span class="temp t2">温度：中</span></div>
+      <h3>3. SNS（Threads・X）の説明</h3>
+      <div class="card">地域の中で話題になる可能性があるSNSの使い方を説明した。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">10:41〜10:46</span><span class="temp t2">温度：中</span></div>
+      <h3>4. ChatGPTで実演し、SEOとの違いを伝える</h3>
+      <div class="card">「大阪で美容室を開業するなら」と聞くと、広告費をかけている競合が出る。AIOはブラックボックスだからこそ中小にも勝ち筋があると伝えた。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">10:47〜10:50</span><span class="temp t1">温度：一度下がる</span></div>
+      <h3>5. 迷い：「依頼はまだ早い」</h3>
+      <div class="card">押し込まず、ChatGPT・Gemini・Copilotの違いなど、代表の質問に一つずつ答えた。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">10:51〜10:54</span><span class="temp t2">温度：中</span></div>
+      <h3>6. 価格を正直に伝える</h3>
+      <div class="card">普段の料金体系と今回の条件、ツールがまだ発展途上であることを率直に伝えた。</div>
+    </div>
+
+    <div class="step turn">
+      <div class="meta"><span class="time">11:01〜11:03</span><span class="temp t3">温度：高</span></div>
+      <span class="turn-label">★ 受注の流れに乗った瞬間</span>
+      <h3>7. 壁打ちの先に業者選びがある</h3>
+      <div class="card">相続した不動産の活用を例に、AIへの相談の果てに業者選びがあることを説明（会話は上を参照）。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">11:03〜11:07</span><span class="temp t3">受注</span></div>
+      <h3>8. 「圧倒的にAIOです」→その場で申込</h3>
+      <div class="card">SNSとAIOのうちAIOを選び、表示先にはオーナー向けの新しいHPを登録した。</div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>キーフレーズとお客様の反応</h2>
+  <div class="phr">
+    <div class="card">
+      <h3 style="color:var(--navy)">営業側が使った言葉</h3>
+      <ol>
+        <li>SEOはお金と時間をかければ上がる。AIOはブラックボックスだからこそ、中小にも勝ち筋がある。<small>SEOに取り組む会社へ</small></li>
+        <li>AIがやっているのは、ネット上の情報を探しに行って抽出しているだけ。<small>AIOの仕組みを一言で</small></li>
+        <li>困ったらAIに壁打ちする。その果てに「どの業者に頼めばいい？」となる。そこに御社が乗ってきたら、問い合わせに間違いなくつながる。<small>決め手になった説明</small></li>
+        <li>いきなり相談すると営業される。だからAIに聞きたいんです。<small>お客様の心理</small></li>
+        <li>完成しきったツールではない。使っていただいて改善したい。<small>正直さが信頼に</small></li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--accent)">お客様の反応（温度が上がったサイン）</h3>
+      <ol>
+        <li>お客様はネットでいくらでも探せる。でも物件ありき。仕入れが難しい。<small>本当の課題</small></li>
+        <li>一括査定は、3万円捨ててるようなもん。<small>過去の失敗</small></li>
+        <li>依頼するのは早いんちゃうかな。<small>一度は迷った</small></li>
+        <li>そう考えたら、私も壁打ちは結構するかもしれない。<small>自分ごとになった瞬間</small></li>
+        <li>圧倒的にAIOです。<small>決断</small></li>
+      </ol>
+    </div>
+  </div>
+  <p class="muted" style="margin:10px 0 0">※発言は文字起こしをもとに、意味を変えない範囲で読みやすく整えています。</p>
+</section>
+
+<section>
+  <h2>出てきた不安と切り返し</h2>
+  <table class="obj">
+    <thead><tr><th style="width:34%">お客様の不安</th><th>切り返し</th></tr></thead>
+    <tbody>
+      <tr><td>まだ土台が整っていない、依頼は早いのでは</td><td>押し込まず、質問に答える。作ったばかりのHPを生かす改善点が出せると伝えた。</td></tr>
+      <tr><td>ChatGPTやGeminiなど、どのAIにも出るのか</td><td>AIが探しに行く場所は基本的に同じ。全体を狙って施策を打つ。</td></tr>
+      <tr><td>他の不動産会社にも提案するなら、うちが埋もれるのでは</td><td>AIの判断はブラックボックスで、誰も操作できない。乗りやすい情報の出し方を支援するだけ。</td></tr>
+      <tr><td>SNSとどちらを優先すべきか</td><td>代表の課題（オーナーの仕入れ）に直結するAIOを優先した。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="tips">
+  <h2>同じ業界でAIOを提案するときのポイント</h2>
+  <div class="card">
+    <ol>
+      <li><strong>「依頼は早い」と迷われたら、押し込まずに質問に答え、相手の実体験に話を戻す。</strong></li>
+      <li><strong>不動産は「相続→活用の相談→業者選び」という壁打ちの流れが描きやすい。</strong></li>
+      <li><strong>SEOに取り組み中の会社には「SEOとAIOの違い（中小の勝ち筋）」を伝える。</strong></li>
+      <li><strong>表示先は「来てほしいお客様」に合わせて選ぶ。</strong>この例ではオーナー向けのHP。</li>
+      <li><strong>ツールの未完成な部分は正直に伝える。</strong>モニターとして一緒に改善する姿勢が信頼につながる。</li>
+    </ol>
+  </div>
+</section>
+
+<div class="note">
+  出典：打ち合わせの文字起こし（約70分）、受注管理シート。<br>
+  社名・個人名・市区町村・競合名は伏せています。発言は文字起こしを読みやすく整えたものです。
+</div>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>経営コンサルの受注事例</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b2430; --sub:#5b6675; --line:#e3e7ec; --bg:#f6f7f9; --card:#fff;
+  --navy:#16325c; --accent:#e8661c; --accent-soft:#fff1e8; --ok:#1f8a5b; --ok-soft:#e8f6ef;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;font-size:16px}
+a{color:var(--navy)}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px}
+.topbar{background:var(--card);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:52px;font-size:14px}
+.topbar a{text-decoration:none;font-weight:700}
+.badge-internal{font-size:12px;color:var(--sub)}
+
+.hero{background:var(--navy);color:#fff;padding:40px 0 36px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tag{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.14)}
+.tag.won{background:var(--accent)}
+.hero h1{font-size:26px;line-height:1.5;margin:0 0 14px;font-weight:900}
+.hero p.lead{margin:0;color:#d7e0ee;font-size:15px}
+
+section{margin:36px 0}
+h2{font-size:20px;margin:0 0 16px;padding-left:12px;border-left:5px solid var(--accent);line-height:1.4}
+h3{font-size:16px;margin:0 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.muted{color:var(--sub);font-size:14px}
+.lead-txt{margin:0 0 14px}
+
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.summary .card h3{font-size:13px;color:var(--accent);letter-spacing:.05em}
+.summary .card p{margin:0;font-size:15px}
+
+table.prof{width:100%;border-collapse:collapse;font-size:15px}
+table.prof th{width:30%;text-align:left;color:var(--sub);font-weight:500;padding:8px 0;border-bottom:1px solid var(--line);vertical-align:top}
+table.prof td{padding:8px 0;border-bottom:1px solid var(--line)}
+
+/* 課題→AIOが刺さった理由 */
+.fit{display:flex;flex-direction:column;gap:12px}
+.fit-row{display:grid;grid-template-columns:1fr 36px 1.25fr;align-items:stretch}
+.fit-row .pain,.fit-row .hit{border-radius:10px;padding:14px 16px;font-size:15px}
+.fit-row .pain{background:var(--card);border:1px solid var(--line)}
+.fit-row .hit{background:var(--accent-soft);border:1px solid #f3c9ae}
+.fit-row .arrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:900;font-size:20px}
+.fit-row .lbl{display:block;font-size:12px;font-weight:700;color:var(--sub);margin-bottom:2px}
+.fit-row .hit .lbl{color:var(--accent)}
+.fit-row .src{display:block;font-size:12px;color:var(--sub);margin-top:6px}
+
+/* 会話ログ */
+.mtg{font-size:15px;font-weight:900;color:#fff;background:var(--navy);border-radius:8px;padding:6px 14px;margin:6px 0 4px}
+.mtg span{font-weight:500;font-size:13px;color:#c8d3e4;margin-left:8px}
+.talk{display:flex;flex-direction:column;gap:10px}
+.scene{font-size:13px;font-weight:700;color:var(--navy);background:#e9eef6;border-radius:6px;padding:4px 12px;margin-top:10px;align-self:flex-start}
+.scene .time{font-family:ui-monospace,Consolas,monospace;font-weight:500;margin-right:6px;color:var(--sub)}
+.msg{max-width:86%;border-radius:12px;padding:10px 14px;font-size:15px}
+.msg .who{display:block;font-size:12px;font-weight:700;margin-bottom:2px}
+.msg.s{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--navy)}
+.msg.s .who{color:var(--navy)}
+.msg.c{align-self:flex-end;background:#fff8f3;border:1px solid #f3c9ae;border-right:4px solid var(--accent)}
+.msg.c .who{color:var(--accent)}
+.why{margin-top:2px;font-size:14px;color:var(--ok);background:var(--ok-soft);border-radius:6px;padding:8px 12px}
+.why b{margin-right:4px}
+.why.turn{color:#fff;background:var(--accent)}
+.kw{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.kw span{font-size:13px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:1px 10px}
+
+.notsaid{border-left:5px solid var(--sub)}
+
+/* timeline */
+.timeline{position:relative;margin-left:8px;padding-left:28px;border-left:2px solid var(--line)}
+.step{position:relative;margin-bottom:16px}
+.step::before{content:"";position:absolute;left:-36px;top:6px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--navy)}
+.step.turn::before{background:var(--accent);border-color:var(--accent);width:18px;height:18px;left:-38px;top:4px}
+.step .meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12px;color:var(--sub);margin-bottom:4px}
+.step .time{font-family:ui-monospace,Consolas,monospace;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:0 6px}
+.temp{font-weight:700;border-radius:4px;padding:0 6px}
+.temp.t1{background:#eef1f5;color:#5b6675}
+.temp.t2{background:#fff6d6;color:#8a6a00}
+.temp.t3{background:var(--accent-soft);color:var(--accent)}
+.step h3{font-size:16px}
+.step .card{padding:14px 18px;font-size:15px}
+.step.turn .card{border:2px solid var(--accent)}
+.turn-label{display:inline-block;background:var(--accent);color:#fff;font-size:12px;font-weight:900;padding:2px 10px;border-radius:4px;margin-bottom:6px}
+.divider{font-size:13px;font-weight:900;color:var(--navy);margin:22px 0 10px -28px;padding-left:28px}
+
+.thermo{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;align-items:end;height:130px;margin:6px 0 4px}
+.thermo .bar{background:#d9dfe7;border-radius:6px 6px 0 0;position:relative}
+.thermo .bar.hot{background:var(--accent)}
+.thermo .bar span{position:absolute;top:-20px;left:0;right:0;text-align:center;font-size:11px;color:var(--sub)}
+.thermo-l{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;font-size:11px;color:var(--sub);text-align:center;line-height:1.4}
+
+.phr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.phr ol{margin:0;padding-left:1.3em}
+.phr li{margin:8px 0;font-size:15px}
+.phr li small{display:block;color:var(--sub);font-size:12px}
+
+table.obj{width:100%;border-collapse:collapse;font-size:15px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+table.obj th,table.obj td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+table.obj thead th{background:var(--bg);font-size:13px;color:var(--sub)}
+
+.tips .card{border-left:5px solid var(--ok)}
+.tips ol{margin:0;padding-left:1.3em}
+.tips li{margin:8px 0}
+
+.note{font-size:13px;color:var(--sub);border-top:1px solid var(--line);padding:20px 0 40px;margin-top:40px}
+
+@media (max-width:720px){
+  .hero h1{font-size:21px}
+  .summary,.phr{grid-template-columns:1fr}
+  .fit-row{grid-template-columns:1fr}
+  .fit-row .arrow{transform:rotate(90deg);height:28px}
+  .msg{max-width:100%}
+  .thermo,.thermo-l{gap:3px}
+  .thermo-l{font-size:10px}
+  table.prof th{width:38%}
+  table.obj thead{display:none}
+  table.obj td{display:block;border-bottom:none;padding:6px 14px}
+  table.obj tr{display:block;border-bottom:1px solid var(--line);padding:8px 0}
+}
+@media print{.topbar{display:none}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <a href="../index.html">← AIO受注事例集</a>
+  <span class="badge-internal">事例 No.03</span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="tags">
+    <span class="tag won">受注</span>
+    <span class="tag">コンサルティング</span>
+    <span class="tag">東京都</span>
+    <span class="tag">従業員 1〜5名</span>
+    <span class="tag">AIOマスター</span>
+  </div>
+  <h1>「誰に相談すればいい？」までAIに聞く時代。<br>事業承継コンサルが"相談先として薦められる"ためにAIOを選ぶまで</h1>
+  <p class="lead">東京都の経営コンサルタント（代表1名・2026年設立）。中小企業の事業承継や後継者育成を支援してきた実績はあるが、新しく立ち上げるオンライン講座の集客はゼロからのスタート。SNSもほぼ未経験だった。</p>
+</div></header>
+
+<main class="wrap">
+
+<section>
+  <h2>3行でわかるこの事例</h2>
+  <div class="summary">
+    <div class="card"><h3>どんな課題</h3><p>経営者を相手にする仕事で「知ってもらう」「信用してもらう」の両方が壁。オンライン講座のリリースは1か月後なのに、集客の入口がない。</p></div>
+    <div class="card"><h3>どう刺さった</h3><p>ChatGPTに事業承継の悩みを相談し、そのまま「誰に相談すればいいか」まで聞く流れを実演。AIが専門家を推薦する場面を見せ、「ここに選択肢として出てくると強い」と伝えた。</p></div>
+    <div class="card"><h3>決め手</h3><p>SNSで毎日テキストを発信すること自体が、AIに拾われる材料になる。SNS施策とAIOを1本の流れとして提案し、<strong>追加費用なしで組み込んだ</strong>。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>会社プロフィール</h2>
+  <div class="card">
+    <table class="prof">
+      <tr><th>所在地</th><td>東京都</td></tr>
+      <tr><th>事業内容</th><td>中小企業（売上1億〜3億円規模）向けの経営コンサル。事業承継・後継者育成（後継者塾）、戦略・資金調達・マーケティングの支援</td></tr>
+      <tr><th>会社規模</th><td>代表1名（海外拠点と行き来しながら活動）</td></tr>
+      <tr><th>商談相手</th><td>代表</td></tr>
+      <tr><th>集客の現状</th><td>これまでは人脈・紹介とスポット案件。オンライン講座を約1か月後にリリース予定だが、集客はこれから。SNSはほぼ未経験。AIは主にアイデア出しに使用（投稿文を作らせると「ありきたり」になる）</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>どんな課題に、AIOマスターがどう刺さったか</h2>
+  <p class="lead-txt muted">左がお客様の課題、右がAIOマスターがその課題の答えとして受け止められた理由です。</p>
+  <div class="fit">
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 1</span>経営者が相手なので「知ってもらう」「信用してもらう」の両方のハードルが高い。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>経営者はAIに壁打ちしたあと「誰に相談すればいい？」まで聞く。そこで専門家として推薦されれば、<strong>第三者の推薦という形で信用ごと届く</strong>。<span class="src">3回目 11:30〜11:33</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 2</span>フォロワーゼロからのSNSで、発信しても見てもらえない。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>AIに拾われやすいのは、インターネット上の<strong>テキスト情報</strong>。X・Threadsで毎日テキストを発信すること自体がAIOの対策になる、と説明。SNSを続ける意味が増えた。<span class="src">3回目 11:34〜11:35</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 3</span>事業承継の支援は、公的機関や同業も発信していて差別化が難しい。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>AIは悩みの中身に合わせて専門家を選ぶ。「後継者育成」「事業承継」の実績を発信し、その文脈で選ばれる位置を取りにいく。<span class="src">2回目・3回目</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 4</span>自分のクライアントにも、これからの集客の考え方を伝えられるようになりたい。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>代表自身が「通常の中小企業にとっても、その分野で検索したときに上に出てくるのは必要になる」と、<strong>自分の支援先にも使える視点</strong>として受け止めた。<span class="src">3回目 11:35</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>AIOマスターをどう説明したか（実際の会話）</h2>
+  <p class="lead-txt muted">初回と2回目はSNS集客と、代表自身のAI活用の学び方が中心でした。AIOは最終回で「SNS発信の意味を広げるもの」として加えています。<strong>経営者が実際にやっている行動（AIへの壁打ち）を実演し、その先に相談先の推薦があることを見せる</strong>順番でした。</p>
+  <div class="card">
+    <div class="mtg">3回目商談<span>担当営業と代表／約70分</span></div>
+    <div class="talk">
+      <div class="scene"><span class="time">11:30</span>SNSの提案のあと、「もう1つ重要な点」として切り出す</div>
+      <div class="msg s"><span class="who">担当営業</span>少し概念的な話になるかもしれないんですが、ちょっと実演させてください。（ChatGPTを開く）例えば事業承継をテーマに、社長さんが壁打ちするとします。</div>
+      <div class="scene"><span class="time">11:31</span>実演：悩みの相談から「誰に相談するか」へ</div>
+      <div class="msg s"><span class="who">担当営業</span>借入が多いとか、何回かやり取りを繰り返していくと、「じゃあ専門家に相談したい」となりますよね。すると、ChatGPTが専門のコンサルタントをピックアップして教えてくれるんです。</div>
+      <div class="msg s"><span class="who">担当営業</span>悩みやふとしたきっかけでChatGPTに壁打ちしたあと、そのまま「誰に相談したらいいの？」までが一連の流れでできてしまう。ここに選択肢として出てくるようになると、めちゃめちゃ強い。これをAIO対策といいます。</div>
+      <div class="why turn"><b>★ 受注の流れに乗った瞬間</b>経営者が実際にやっている行動（AIへの壁打ち）から、相談先として推薦される場面までを一続きで見せた。</div>
+      <div class="scene"><span class="time">11:34</span>SNSとのつながり</div>
+      <div class="msg s"><span class="who">担当営業</span>AIOで出やすくなるのは、インターネット上のテキスト情報なんです。だから、SNSでテキストを発信していくことが、そのまま対策として必要になってきます。</div>
+      <div class="msg c"><span class="who">代表</span>これは通常の中小企業にとっても、その分野で検索したときに上に出てくるっていうのは必要になってきますよね。</div>
+      <div class="msg s"><span class="who">担当営業</span>そうですね。</div>
+      <div class="why"><b>ポイント</b>代表は「自分の集客」だけでなく「自分のクライアントにも必要なこと」として受け止めた。コンサル業ならではの刺さり方。</div>
+      <div class="scene"><span class="time">11:57</span>申込書を見ながら</div>
+      <div class="msg c"><span class="who">代表</span>SNSの月額の上に、このAIのパッケージ（月額）っていうのは、プラスでかかるんですか。</div>
+      <div class="msg s"><span class="who">担当営業</span>かかりません。</div>
+      <div class="why"><b>ポイント</b>AIOを別料金で売らず、SNS施策と一体の「入口づくり」として組み込んだ。</div>
+    </div>
+  </div>
+
+  <div class="card notsaid" style="margin-top:12px">
+    <h3>2回目までに話していたこと</h3>
+    <p style="margin:0;font-size:15px">初回・2回目では、AIOの話はほとんど出ていません。集客の入口（X・Threadsで見込み客の母数を作る）と、代表自身がAIを使えるようになるための学び方（研修と、マンツーマンの家庭教師型）が中心でした。</p>
+    <p style="margin:8px 0 0;font-size:15px">AIOは最終回で、SNSで発信する意味をもう1段広げるものとして加え、その場で申込みに進んでいます。</p>
+  </div>
+</section>
+
+<section>
+  <h2>提案の流れ（この順番で話した）</h2>
+  <div class="timeline">
+
+    <div class="divider">初回商談</div>
+
+    <div class="step">
+      <div class="meta"><span class="time">10:03〜10:30</span><span class="temp t1">温度：中</span></div>
+      <h3>1. 事業の整理：一番の壁は集客</h3>
+      <div class="card">前職の経験を土台に、中小企業の社長向けコンサルとオンライン講座を立ち上げる段階。代表から「経営者に知ってもらい、信用してもらうハードルを越えるのが大変」という本音が出た。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">10:30〜10:55</span><span class="temp t2">温度：中</span></div>
+      <h3>2. 入口はSNS（X・Threads）で見込み客の母数を作る</h3>
+      <div class="card">同業のフォロワーに直接アプローチする方法や、Threadsで小さなアカウントが話題になった例を紹介。YouTubeは時間と費用がかかるため、まずは最小限から始める方針を示した。</div>
+    </div>
+
+    <div class="divider">2回目商談</div>
+
+    <div class="step">
+      <div class="meta"><span class="time">11:00〜11:30</span><span class="temp t2">温度：中</span></div>
+      <h3>3. 提案書で整理：誰に、どこで、どこまで自動化するか</h3>
+      <div class="card">後継者塾の受講者は30〜40代が中心。「AIで作った投稿はありきたりになる」という代表の不安には、人の言葉も混ぜて投稿する設計で応えた。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">11:30〜12:00</span><span class="temp t3">温度：高</span></div>
+      <h3>4. 代表自身もAIを使えるようになりたい</h3>
+      <div class="card">代表から「自分のクライアントにも、AIで仕組みを作る入口を教えられるようになりたい」という要望。学び方を研修と家庭教師型の組み合わせで提案した。判断は9月中旬に。</div>
+    </div>
+
+    <div class="divider">3回目商談</div>
+
+    <div class="step">
+      <div class="meta"><span class="time">11:00〜11:30</span><span class="temp t2">温度：中</span></div>
+      <h3>5. 提案内容と契約条件の確認</h3>
+      <div class="card">1年間の伴走で、2年目以降は自分で回せる状態を目指すこと、途中解約の条件などを確認した。</div>
+    </div>
+
+    <div class="step turn">
+      <div class="meta"><span class="time">11:30〜11:35</span><span class="temp t3">温度：高</span></div>
+      <span class="turn-label">★ 受注の流れに乗った瞬間</span>
+      <h3>6. ChatGPTでの壁打ちを実演→AIO</h3>
+      <div class="card">悩みの相談から相談先の推薦までを実演し、SNSのテキスト発信がAIに拾われる材料になることを説明（会話は上を参照）。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">11:53〜12:21</span><span class="temp t3">受注</span></div>
+      <h3>7. SNS施策にAIOを組み込み、その場で申込</h3>
+      <div class="card">AIOは追加費用なしでSNS施策に組み込み、申込書を一緒に確認しながらその場で申込みとなった。</div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>キーフレーズとお客様の反応</h2>
+  <div class="phr">
+    <div class="card">
+      <h3 style="color:var(--navy)">営業側が使った言葉</h3>
+      <ol>
+        <li>悩みを壁打ちしたあと、そのまま「誰に相談したらいいの？」まで一連の流れでできてしまう。<small>経営者の実際の行動から入る</small></li>
+        <li>ここに選択肢として出てくるようになると、めちゃめちゃ強い。<small>AIOの価値を一言で</small></li>
+        <li>AIOで出やすくなるのは、インターネット上のテキスト情報。SNSのテキスト発信がそのまま対策になる。<small>SNS施策とAIOを1本につなぐ</small></li>
+        <li>AIに全部任せるより、人の言葉も混ぜたほうが面白い。<small>2回目。投稿の精度への不安に対して</small></li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--accent)">お客様の反応（温度が上がったサイン）</h3>
+      <ol>
+        <li>経営者に知ってもらって、かつ信用してもらう。そのハードルを越えるのが大変。<small>初回。本音の課題</small></li>
+        <li>（AIで作った投稿は）なんか、ありきたりな感じで。<small>2回目。精度への不安</small></li>
+        <li>通常の中小企業にとっても、その分野で検索したときに上に出てくるのは必要になってきますよね。<small>自分のクライアントにも使える視点に</small></li>
+      </ol>
+    </div>
+  </div>
+  <p class="muted" style="margin:10px 0 0">※発言は文字起こしをもとに、意味を変えない範囲で読みやすく整えています。</p>
+</section>
+
+<section>
+  <h2>出てきた不安と切り返し</h2>
+  <table class="obj">
+    <thead><tr><th style="width:34%">お客様の不安</th><th>切り返し</th></tr></thead>
+    <tbody>
+      <tr><td>AIで作る投稿は「ありきたり」で埋もれるのでは</td><td>AIが人を完全に再現するのは無理と正直に伝え、後継者塾で感じたことなど、本人の言葉を混ぜて投稿する設計にした。</td></tr>
+      <tr><td>途中で合わなかったら、解約できるのか</td><td>最低契約は12か月。ツールを売るのではなく、1年伴走しながら試行錯誤する前提と説明した。</td></tr>
+      <tr><td>海外にいる期間が長い</td><td>打ち合わせはオンライン、連絡は電話中心でも進められる形にした。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="tips">
+  <h2>同じ業界でAIOを提案するときのポイント</h2>
+  <div class="card">
+    <ol>
+      <li><strong>経営者・専門家が相手の業種は「AIへの壁打ち→相談先の推薦」の流れを実演する。</strong></li>
+      <li><strong>SNS施策と一緒に提案するときは「テキスト発信＝AIに拾われる材料」とつなぐ。</strong>SNSを続ける理由が1つ増える。</li>
+      <li><strong>コンサル・士業には「自分のクライアントにも必要になる」視点が刺さる。</strong></li>
+      <li><strong>AIOを別料金で上乗せせず、入口づくりの一部として組み込むと決めやすい。</strong></li>
+    </ol>
+  </div>
+</section>
+
+<div class="note">
+  出典：初回・2回目・3回目商談の文字起こし、受注管理シート。<br>
+  社名・個人名・市区町村・競合名は伏せています。発言は文字起こしを読みやすく整えたものです。
+</div>
+
+</main>
+</body>
+</html>

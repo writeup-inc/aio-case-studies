@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>解体工事会社の受注事例</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b2430; --sub:#5b6675; --line:#e3e7ec; --bg:#f6f7f9; --card:#fff;
+  --navy:#16325c; --accent:#e8661c; --accent-soft:#fff1e8; --ok:#1f8a5b; --ok-soft:#e8f6ef;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;font-size:16px}
+a{color:var(--navy)}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px}
+.topbar{background:var(--card);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:52px;font-size:14px}
+.topbar a{text-decoration:none;font-weight:700}
+.badge-internal{font-size:12px;color:var(--sub)}
+
+.hero{background:var(--navy);color:#fff;padding:40px 0 36px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tag{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.14)}
+.tag.won{background:var(--accent)}
+.hero h1{font-size:26px;line-height:1.5;margin:0 0 14px;font-weight:900}
+.hero p.lead{margin:0;color:#d7e0ee;font-size:15px}
+
+section{margin:36px 0}
+h2{font-size:20px;margin:0 0 16px;padding-left:12px;border-left:5px solid var(--accent);line-height:1.4}
+h3{font-size:16px;margin:0 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.muted{color:var(--sub);font-size:14px}
+.lead-txt{margin:0 0 14px}
+
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.summary .card h3{font-size:13px;color:var(--accent);letter-spacing:.05em}
+.summary .card p{margin:0;font-size:15px}
+
+table.prof{width:100%;border-collapse:collapse;font-size:15px}
+table.prof th{width:30%;text-align:left;color:var(--sub);font-weight:500;padding:8px 0;border-bottom:1px solid var(--line);vertical-align:top}
+table.prof td{padding:8px 0;border-bottom:1px solid var(--line)}
+
+/* 課題→AIOが刺さった理由 */
+.fit{display:flex;flex-direction:column;gap:12px}
+.fit-row{display:grid;grid-template-columns:1fr 36px 1.25fr;align-items:stretch}
+.fit-row .pain,.fit-row .hit{border-radius:10px;padding:14px 16px;font-size:15px}
+.fit-row .pain{background:var(--card);border:1px solid var(--line)}
+.fit-row .hit{background:var(--accent-soft);border:1px solid #f3c9ae}
+.fit-row .arrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:900;font-size:20px}
+.fit-row .lbl{display:block;font-size:12px;font-weight:700;color:var(--sub);margin-bottom:2px}
+.fit-row .hit .lbl{color:var(--accent)}
+.fit-row .src{display:block;font-size:12px;color:var(--sub);margin-top:6px}
+
+/* 会話ログ */
+.mtg{font-size:15px;font-weight:900;color:#fff;background:var(--navy);border-radius:8px;padding:6px 14px;margin:6px 0 4px}
+.mtg span{font-weight:500;font-size:13px;color:#c8d3e4;margin-left:8px}
+.talk{display:flex;flex-direction:column;gap:10px}
+.scene{font-size:13px;font-weight:700;color:var(--navy);background:#e9eef6;border-radius:6px;padding:4px 12px;margin-top:10px;align-self:flex-start}
+.scene .time{font-family:ui-monospace,Consolas,monospace;font-weight:500;margin-right:6px;color:var(--sub)}
+.msg{max-width:86%;border-radius:12px;padding:10px 14px;font-size:15px}
+.msg .who{display:block;font-size:12px;font-weight:700;margin-bottom:2px}
+.msg.s{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--navy)}
+.msg.s .who{color:var(--navy)}
+.msg.c{align-self:flex-end;background:#fff8f3;border:1px solid #f3c9ae;border-right:4px solid var(--accent)}
+.msg.c .who{color:var(--accent)}
+.why{margin-top:2px;font-size:14px;color:var(--ok);background:var(--ok-soft);border-radius:6px;padding:8px 12px}
+.why b{margin-right:4px}
+.why.turn{color:#fff;background:var(--accent)}
+.kw{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.kw span{font-size:13px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:1px 10px}
+
+.notsaid{border-left:5px solid var(--sub)}
+
+/* timeline */
+.timeline{position:relative;margin-left:8px;padding-left:28px;border-left:2px solid var(--line)}
+.step{position:relative;margin-bottom:16px}
+.step::before{content:"";position:absolute;left:-36px;top:6px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--navy)}
+.step.turn::before{background:var(--accent);border-color:var(--accent);width:18px;height:18px;left:-38px;top:4px}
+.step .meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12px;color:var(--sub);margin-bottom:4px}
+.step .time{font-family:ui-monospace,Consolas,monospace;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:0 6px}
+.temp{font-weight:700;border-radius:4px;padding:0 6px}
+.temp.t1{background:#eef1f5;color:#5b6675}
+.temp.t2{background:#fff6d6;color:#8a6a00}
+.temp.t3{background:var(--accent-soft);color:var(--accent)}
+.step h3{font-size:16px}
+.step .card{padding:14px 18px;font-size:15px}
+.step.turn .card{border:2px solid var(--accent)}
+.turn-label{display:inline-block;background:var(--accent);color:#fff;font-size:12px;font-weight:900;padding:2px 10px;border-radius:4px;margin-bottom:6px}
+.divider{font-size:13px;font-weight:900;color:var(--navy);margin:22px 0 10px -28px;padding-left:28px}
+
+.thermo{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;align-items:end;height:130px;margin:6px 0 4px}
+.thermo .bar{background:#d9dfe7;border-radius:6px 6px 0 0;position:relative}
+.thermo .bar.hot{background:var(--accent)}
+.thermo .bar span{position:absolute;top:-20px;left:0;right:0;text-align:center;font-size:11px;color:var(--sub)}
+.thermo-l{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;font-size:11px;color:var(--sub);text-align:center;line-height:1.4}
+
+.phr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.phr ol{margin:0;padding-left:1.3em}
+.phr li{margin:8px 0;font-size:15px}
+.phr li small{display:block;color:var(--sub);font-size:12px}
+
+table.obj{width:100%;border-collapse:collapse;font-size:15px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+table.obj th,table.obj td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+table.obj thead th{background:var(--bg);font-size:13px;color:var(--sub)}
+
+.tips .card{border-left:5px solid var(--ok)}
+.tips ol{margin:0;padding-left:1.3em}
+.tips li{margin:8px 0}
+
+.note{font-size:13px;color:var(--sub);border-top:1px solid var(--line);padding:20px 0 40px;margin-top:40px}
+
+@media (max-width:720px){
+  .hero h1{font-size:21px}
+  .summary,.phr{grid-template-columns:1fr}
+  .fit-row{grid-template-columns:1fr}
+  .fit-row .arrow{transform:rotate(90deg);height:28px}
+  .msg{max-width:100%}
+  .thermo,.thermo-l{gap:3px}
+  .thermo-l{font-size:10px}
+  table.prof th{width:38%}
+  table.obj thead{display:none}
+  table.obj td{display:block;border-bottom:none;padding:6px 14px}
+  table.obj tr{display:block;border-bottom:1px solid var(--line);padding:8px 0}
+}
+@media print{.topbar{display:none}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <a href="../index.html">← AIO受注事例集</a>
+  <span class="badge-internal">事例 No.01</span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="tags">
+    <span class="tag won">受注</span>
+    <span class="tag">建設・工事</span>
+    <span class="tag">長野県</span>
+    <span class="tag">従業員 6〜20名</span>
+    <span class="tag">AIOマスター</span>
+  </div>
+  <h1>「地図検索で一番に出たい」解体工事会社に、<br>その先の“AI検索”を実演で見せてAIOマスターを受注</h1>
+  <p class="lead">長野県の解体工事会社（従業員6名）。マッチングサイトからの受注が減り、自社で新規客を呼び込む入口を作り直したい、という相談から、初回商談の22日後に受注。</p>
+</div></header>
+
+<main class="wrap">
+
+<section>
+  <h2>3行でわかるこの事例</h2>
+  <div class="summary">
+    <div class="card"><h3>どんな課題</h3><p>マッチングサイトからの受注が減り、自社起点で新規客を呼ぶ入口がない。「地図検索で一番に出たい」とお客様自身が考えていた。</p></div>
+    <div class="card"><h3>どう刺さった</h3><p>初回でAIに「地域名＋解体業者 おすすめ」を聞く実演をし、<strong>薦められたのは競合ばかり</strong>。2回目で地域の検索キーワードを調べて見せ、「やれば確実に上がる」と示した。</p></div>
+    <div class="card"><h3>決め手</h3><p>「受け皿だけでなく入口も強化しないと意味がない」として、<strong>AIOを窓口づくりの費用の中に組み込んだ</strong>。追加費用なしで入口対策ができる形にした。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>会社プロフィール</h2>
+  <div class="card">
+    <table class="prof">
+      <tr><th>所在地</th><td>長野県</td></tr>
+      <tr><th>事業内容</th><td>解体工事（アスベスト調査・産業廃棄物処理・外構工事まで自社で一貫対応）</td></tr>
+      <tr><th>会社規模</th><td>従業員6名（見積もり・事務は代表と常務の2名）</td></tr>
+      <tr><th>商談相手</th><td>初回は代表。2回目は代表と常務（家族）</td></tr>
+      <tr><th>売上規模</th><td>月商 約1,300万円／住宅1棟あたり約100万〜400万円</td></tr>
+      <tr><th>集客の現状</th><td>問い合わせは全チャネル合計で月30〜40件、受注率は約1割。昨年まではマッチングサイト中心、いまは紹介や取引先（不動産会社など20〜30社）、地方紙への広告が中心</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>どんな課題に、AIOマスターがどう刺さったか</h2>
+  <p class="lead-txt muted">左がお客様の課題、右がAIOマスターがその課題の答えとして受け止められた理由です。</p>
+  <div class="fit">
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 1</span>集客の柱だった<strong>マッチングサイトからの受注がほぼなくなった</strong>。紹介だけでも食べてはいけるが、いつまで続くかわからない。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>AIに聞いたときの<strong>参照元が、そのマッチングサイト</strong>だった。AIOで自社の情報をAIに拾われる側になれば、他社のサイトに頼らずに自分の入口を持てる。<span class="src">初回 46:23／お客様が実演画面を見て自分で気づいた</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 2</span>スマホで調べたら、地図検索でも<strong>自社が一番に出る状態にしたい</strong>。いま上に出ているのは、口コミが2〜3件しかない他社。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>お客様が考えていた地図検索の対策を否定せず、「やった先はAI検索に載るかにつながる」と<strong>ゴールを一段先に置き直した</strong>。お客様のやりたいことの延長として受け止められた。<span class="src">初回 43:08</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 3</span>地域で検索対策をしている解体業者は<strong>ほとんどいない</strong>（お客様の認識）。でも、自社も何もしていない。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>地域で実際に検索されているキーワードを調べて見せ、「ホームページに新しい開発は一切なし。キーワードとお客様の動きを捉えてやれば<strong>確実に上がる</strong>」と伝えた。先に動いた会社が勝てる、と納得。<span class="src">2回目 18:14〜18:16、19:02</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 4</span>マッチングサイトは検索の上位に出るので、<strong>「大手だろう」と思われて選ばれる</strong>。自社は名前が知られていない。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>「地域で選ばれ続けるには<strong>ブランド力と口コミ量</strong>」と伝え、他業種で口コミ740件・評価4.9まで伸ばした事例を見せた。お客様「結局それが物を言うんだと思う」。<span class="src">2回目 18:09〜18:13、18:29〜18:31</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 5</span>アスベスト調査から外構まで一貫して対応できる強みがあるのに、<strong>解体業は「怖い」というイメージ</strong>を持たれやすい。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>「自社の強みは分かっていても、<strong>世間からどう見られているかは分からない</strong>。そのギャップを埋めるのも月額の中に入っている」と説明。AIでの見え方を整えることが、イメージを変えることにつながると伝わった。<span class="src">初回 46:23〜47:50／2回目 18:59〜19:02</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>AIOマスターをどう説明したか（実際の会話）</h2>
+  <p class="lead-txt muted">AIOに関わる部分だけを、2回の商談から時系列で抜き出しています。<strong>商品名や料金から入らず、お客様が言い出した「地図検索」の話から入る → 初回は実演で「出ていない」と実感してもらう → 2回目で「どうすれば出るか」を地域のデータで示す</strong>、という順番でした。</p>
+
+  <div class="card">
+    <div class="mtg">初回商談<span>担当営業と代表／約65分</span></div>
+    <div class="talk">
+
+      <div class="scene"><span class="time">26:22</span>前フリ：お客様が自分から「検索で一番に出たい」と話す</div>
+      <div class="msg c"><span class="who">お客様</span>地図検索の対策をしている解体屋さんって、ほぼないんですよ。いま上に出てくるのは別の業者さんで、口コミも1件か2件。うちが普通にやれば、100%そこに自社がボーンと出られる。</div>
+      <div class="why"><b>ここが土台</b>担当はこの時点ではAIOを出さず、「検索で出てくるポジションを確立したい、ということですね」と要望の整理だけにとどめた。</div>
+
+      <div class="scene"><span class="time">43:08</span>地図検索の“その先”としてAI検索を出し、その場で実演する</div>
+      <div class="msg s"><span class="who">担当営業</span>地図検索の対策ももちろん大事なんですけど、それをやった先は、AI検索に載ってくるかどうかにつながってくる話なんですよね。</div>
+      <div class="msg c"><span class="who">お客様</span>それも、なんか聞いたことあります。</div>
+      <div class="msg s"><span class="who">担当営業</span>（画面共有で、AIに「（地域名）の解体業者でおすすめは」と入力）</div>
+      <div class="msg c"><span class="who">お客様</span>やっぱりこれ、全部強いですね。……ほとんど競合ですね。</div>
+
+      <div class="scene"><span class="time">44:29</span>なぜ大事か：AIの推薦は信頼される</div>
+      <div class="msg s"><span class="who">担当営業</span>営業マンが言うことは信じないけど、AIが言った話は信じるんですよ。営業マンが「うちが一番いいです」と言っても誰も信じないのに、その場でAIに聞いて「おすすめはここです」と出ると「なるほど」となる。これが今のリアルです。</div>
+
+      <div class="scene"><span class="time">46:23</span>お客様が自分で原因を探し始める</div>
+      <div class="msg c"><span class="who">お客様</span>この参照元、ここ（マッチングサイト）なんですよ。ここがよく出しているので。</div>
+      <div class="msg s"><span class="who">担当営業</span>ここから引っ張ってきているのは、費用感と「市内に何社あるか」くらいですね。だから会社の見せ方と、御社の強み。AIが調べたときに出る御社の見え方が、すごく大事なんです。</div>
+      <div class="why turn"><b>★ 受注の流れに乗った瞬間①</b>お客様が「説明を聞く側」から「一緒に原因を探す側」に変わった。</div>
+    </div>
+
+    <div class="mtg" style="margin-top:24px">2回目商談<span>担当営業・上席と、代表・常務／約65分</span></div>
+    <div class="talk">
+
+      <div class="scene"><span class="time">18:06</span>考え方：相手を知らずに発信しても、お金が垂れ流しになる</div>
+      <div class="msg s"><span class="who">上席</span>広告の世界では、問い合わせ1件に3万〜5万円かけるのが相場と言われます。お客様がどんな理由で探しているかを理解しないまま発信しても、右から左にお金が垂れ流しになるだけなんです。</div>
+
+      <div class="scene"><span class="time">18:09〜18:13</span>他業種の事例：地域No.1を目指した引っ越し会社</div>
+      <div class="msg s"><span class="who">上席</span>「この地域でNo.1の引っ越し屋になりたい」という会社さんに、まず「この地域のお客様は何を、どんな理由で探しているのか」を一緒に理解しましょう、と話したんです。そうして発信を変えたら、口コミが740件まで増えて、評価も4.9になりました。</div>
+
+      <div class="scene"><span class="time">18:14〜18:16</span>本題：この地域で実際に検索されている言葉を見せる</div>
+      <div class="msg s"><span class="who">上席</span>（地域名）で解体を探す人の検索を調べてきました。多いのはこのあたりです。</div>
+      <div class="kw"><span>解体業者</span><span>解体工事</span><span>見積もり</span><span>空き家</span><span>木造住宅</span><span>補助金</span><span>アスベスト</span></div>
+      <div class="msg s"><span class="who">上席</span>探している理由も「業者を探している」「比較している」「金額を知りたい」「発注の直前」「空き家を処分したい」に分かれます。まず、この言葉が御社のホームページで発信されているか。ホームページに新しい開発は一切いりません。キーワードと、調べているお客様の動きを捉えて、MEO・SEO・AIOをちゃんとやれば確実に上がってきます。</div>
+      <div class="why"><b>ポイント</b>初回の「AIで出ていない」に対して、2回目は「どうすれば出るか」を<strong>その地域のデータ</strong>で答えている。</div>
+
+      <div class="scene"><span class="time">18:29〜18:31</span>お客様が自分の言葉で必要性を語る</div>
+      <div class="msg s"><span class="who">上席</span>地域でやっていくなら、最後はブランド力と口コミの量です。</div>
+      <div class="msg c"><span class="who">お客様</span>結局それが物を言うんだと思います。マッチングサイトで申し込む人は、検索の上位に出ているから「たぶん大手だろう」と思って選んでいる。だから地図検索で、地域で最初にうちが出るのはすごくいいなと思っていて。</div>
+
+      <div class="scene"><span class="time">18:48</span>AIOを窓口づくりの費用に組み込む</div>
+      <div class="msg s"><span class="who">上席</span>その60万円の中に、AIOのほうも入れますので。受け皿だけ作っても意味がなくて、入口も強化しないと意味がないと思っているので、一緒にやらせてもらいます。安心してください。</div>
+      <div class="why turn"><b>★ 受注の流れに乗った瞬間②</b>お客様から費用の内訳を聞かれた場面で、追加費用なしで入口対策（AIO）まで含めると伝えた。</div>
+
+      <div class="scene"><span class="time">18:59〜19:02</span>AIOで何が変わるか：世間からの見え方のギャップを埋める</div>
+      <div class="msg s"><span class="who">上席</span>自社の強みや弱みは一番分かっていても、世間様からどう見られているかは分からないじゃないですか。そのギャップを埋めるのも月額の中に入っています。一つ分かっているのは、解体工事業はイメージで損をしやすいということで。</div>
+      <div class="msg c"><span class="who">お客様</span>「怖い」と思われがちなんですよね。……（地域名）で解体と検索しても、地図検索の対策をしている会社はほとんどない。口コミも2〜3件しかない。うちがやれば、いいところまで行くんじゃないかと思っています。</div>
+      <div class="msg s"><span class="who">上席</span>行くと思いますよ。</div>
+    </div>
+  </div>
+
+  <div class="card notsaid" style="margin-top:12px">
+    <h3>価格についての補足</h3>
+    <p style="margin:0;font-size:15px">この商談では、<strong>AIOマスター単体の価格は提示していません</strong>。問い合わせ窓口（公式LINE×AI）の構築費として、初期60万円＋月5万円で提案し、その中にAIO対策を含める形にしています（受注金額の合計120万円は、60万円＋月5万円×12か月と一致します）。</p>
+  </div>
+</section>
+
+<section>
+  <h2>商談の温度の変化（初回・約65分）</h2>
+  <div class="card">
+    <div class="thermo" aria-hidden="true">
+      <div class="bar" style="height:22%"><span>低</span></div>
+      <div class="bar" style="height:34%"></div>
+      <div class="bar" style="height:52%"></div>
+      <div class="bar" style="height:48%"></div>
+      <div class="bar hot" style="height:80%"><span>★</span></div>
+      <div class="bar hot" style="height:88%"></div>
+      <div class="bar" style="height:64%"></div>
+      <div class="bar hot" style="height:92%"><span>高</span></div>
+    </div>
+    <div class="thermo-l">
+      <div>自己紹介</div><div>現状<br>ヒアリング</div><div>要望の<br>整理</div><div>数字の<br>深掘り</div><div>AI検索<br>実演</div><div>参照元と<br>見え方</div><div>費用の<br>不安</div><div>試したい<br>→次回</div>
+    </div>
+    <p class="muted" style="margin:12px 0 0">★がAI検索の実演。費用の話で一度下がったものの、「全部一気にではなく段階的に」で持ち直した。</p>
+  </div>
+</section>
+
+<section>
+  <h2>提案の流れ（この順番で話した）</h2>
+  <div class="timeline">
+
+    <div class="divider">初回商談</div>
+
+    <div class="step">
+      <div class="meta"><span class="time">00:00〜22:33</span><span class="temp t1">温度：低〜中</span></div>
+      <h3>1. 現状ヒアリングと「入れて終わりではない、1年伴走する」</h3>
+      <div class="card">
+        集客の流れの変化、見積もりできる人が2人しかいないこと、ChatGPTで見積もりを試してうまくいかなかったことを聞く。「AIは育てるのが大変では」という不安には、「ツールを入れてゴールでは絶対ない。まずは1年間伴走させてください」と先に答えた。
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">22:33〜41:58</span><span class="temp t2">温度：中</span></div>
+      <h3>2. お客様の「やりたいこと」を聞き切り、数字と季節性を確認</h3>
+      <div class="card">
+        お客様のやりたいことは、①概算見積もりの窓口、②検索で一番に出ること。担当は提案を足さず、「どちらも受注を増やすため」と1本にまとめた。補助金の時期に依頼が集中することも確認し、お客様から「後から知った人も、検索して一番に出てくれば集客しやすい」という言葉が出た。
+      </div>
+    </div>
+
+    <div class="step turn">
+      <div class="meta"><span class="time">43:08〜47:50</span><span class="temp t3">温度：高</span></div>
+      <span class="turn-label">★ 受注の流れに乗った瞬間①</span>
+      <h3>3. 地図検索の“その先”としてAI検索を実演し、参照元と見え方まで一緒に見る</h3>
+      <div class="card">競合ばかりが薦められる画面と、参照元がマッチングサイトであることを、お客様と一緒に確認した（会話は上を参照）。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">47:50〜65:27</span><span class="temp t3">温度：高</span></div>
+      <h3>4. 受け皿（問い合わせ窓口）を短く紹介 →「1回試してみたい」→ 決裁者同席の2回目を設定</h3>
+      <div class="card">
+        見つけてもらった人の受け皿として、公式LINEで概算見積もりを受ける仕組みを紹介。費用の不安には「優先順位をつけて段階的に」で応え、お客様の「1回ちょっと試してみたいですね」を引き出した。最後に決裁の仕組みを聞き、常務（家族）も同席する2回目を2日後に設定した。
+      </div>
+    </div>
+
+    <div class="divider">2回目商談（上席が同席）</div>
+
+    <div class="step">
+      <div class="meta"><span class="time">18:03〜18:13</span><span class="temp t2">温度：中</span></div>
+      <h3>5. 前回の振り返り → 他業種の「地域No.1」事例</h3>
+      <div class="card">
+        常務にも前回の話を共有したうえで、「お客様が何を探しているかを理解して発信する」と口コミ740件・評価4.9まで伸びた他業種の事例を紹介した。
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">18:14〜18:31</span><span class="temp t3">温度：高</span></div>
+      <h3>6. この地域で検索されている言葉と検索の理由を見せる</h3>
+      <div class="card">
+        「解体業者・見積もり・空き家・補助金・アスベスト」など、地域で実際に検索されている言葉を提示。「ホームページの作り直しは不要、キーワードを捉えてMEO・SEO・AIOをやれば確実に上がる」と伝えた。お客様は自分から「地図検索で地域で最初にうちが出るのはすごくいい」と話した。
+      </div>
+    </div>
+
+    <div class="step turn">
+      <div class="meta"><span class="time">18:47〜18:52</span><span class="temp t3">温度：高</span></div>
+      <span class="turn-label">★ 受注の流れに乗った瞬間②</span>
+      <h3>7. 費用の内訳の質問に「AIOも中に入れる」と答える</h3>
+      <div class="card">
+        お客様から「60万円の内訳を知りたい」と質問。「設計と人が動く費用。そして、その中にAIOも入れる。入口も強化しないと意味がないので」と回答し、追加費用なしで入口対策まで含まれる形にした。
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">18:59〜19:07</span><span class="temp t3">温度：高</span></div>
+      <h3>8. 「世間からの見え方」を整える意味を伝え、次回で最終確認</h3>
+      <div class="card">
+        「強みは分かっていても、世間からどう見られているかは分からない。そのギャップを埋める」と説明。お客様は「地域で対策している会社はほとんどない。うちがやれば、いいところまで行くと思う」。その場では決めず、代表から常務に改めて話したうえで翌週に最終確認の場を設定し、9月末に受注した。
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>キーフレーズとお客様の反応</h2>
+  <div class="phr">
+    <div class="card">
+      <h3 style="color:var(--navy)">営業側が使った言葉</h3>
+      <ol>
+        <li>地図検索の対策も大事。でもそれをやった先は、AI検索に載ってくるかにつながる。<small>お客様の要望を否定せず、ゴールを一段先へ（初回）</small></li>
+        <li>営業マンが言うことは信じないけど、AIが言った話は信じるんですよ。<small>AIOが必要な理由を一言で（初回）</small></li>
+        <li>AIが調べたときに出る、御社の見え方がすごく大事なんです。<small>AIOでやることを一言で（初回）</small></li>
+        <li>ホームページに新しい開発は一切いりません。キーワードを捉えてやれば確実に上がってきます。<small>「大がかりでは」という不安を先に消す（2回目）</small></li>
+        <li>受け皿だけ作っても意味がない。入口も強化しないと意味がないので、AIOも入れます。<small>AIOを提案全体の中に位置づける（2回目）</small></li>
+        <li>世間様からどう見られているかは分からない。そのギャップを埋めます。<small>AIOの価値を経営者の言葉で（2回目）</small></li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--accent)">お客様の反応（温度が上がったサイン）</h3>
+      <ol>
+        <li>うちが普通にやれば、100%そこに自社がボーンと出られる。<small>検索対策の勝ち筋を自分から語る（初回）</small></li>
+        <li>ほとんど競合ですね。<small>AI検索の実演を見て（初回）</small></li>
+        <li>この参照元、ここがよく出しているので。<small>聞く側から一緒に原因を探す側へ（初回）</small></li>
+        <li>結局それ（ブランド力と口コミ）が物を言うんだと思います。<small>AIOの必要性を自分の言葉で（2回目）</small></li>
+        <li>うちがやれば、いいところまで行くんじゃないか。<small>導入後の姿を想像し始めた（2回目）</small></li>
+      </ol>
+    </div>
+  </div>
+  <p class="muted" style="margin:10px 0 0">※発言は文字起こしをもとに、意味を変えない範囲で読みやすく整えています。</p>
+</section>
+
+<section>
+  <h2>出てきた不安と切り返し</h2>
+  <table class="obj">
+    <thead><tr><th style="width:34%">お客様の不安</th><th>切り返し</th></tr></thead>
+    <tbody>
+      <tr><td>口コミは結局、自分たちで地道に増やすしかないのか</td><td>他業種で、お客様が探しているものを理解して発信を変え、口コミ740件・評価4.9まで伸ばした事例を見せた。</td></tr>
+      <tr><td>検索で上に出すには、ホームページを作り直す必要があるのでは</td><td>「新しい開発は一切いらない」。地域で検索されている言葉を捉えて、いまのページの見せ方を整えればよいと伝えた。</td></tr>
+      <tr><td>費用の内訳が分からない</td><td>設計と人が動く費用だと説明し、その中にAIO（入口の強化）も含めると伝えた。</td></tr>
+      <tr><td>AIを1〜3年かけて育てないと使えないのでは</td><td>作って終わりではなく、1年間伴走して毎月調整すると先に伝えた。</td></tr>
+      <tr><td>自分ひとりでは決められない</td><td>初回の最後に決裁の仕組みを聞き、常務も同席する2回目を2日後に設定した。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="tips">
+  <h2>同じ業界でAIOを提案するときのポイント</h2>
+  <div class="card">
+    <ol>
+      <li><strong>お客様が「地図検索（MEO）」「口コミ」の話をしたら、それがAIOの入口。</strong>否定せずに「その先はAI検索」とゴールを一段先に置く。</li>
+      <li><strong>初回は「出ていない」を実演で見せる。</strong>「地域名＋業種＋おすすめ」をAIに聞き、参照元まで一緒に見る。地方の工事業は、競合やマッチングサイトばかりが出やすい。</li>
+      <li><strong>2回目は「どうすれば出るか」をその地域のデータで見せる。</strong>実際に検索されている言葉と、検索する理由を並べ、「ホームページの作り直しは不要」と伝える。</li>
+      <li><strong>AIOは単体で売り込まず、「入口」として提案全体に組み込む。</strong>受け皿（問い合わせ窓口）とセットにすると、「入口も強化しないと意味がない」が自然に伝わる。</li>
+      <li><strong>紹介・口コミで仕事が決まる業界には「AIは第三者の推薦」「世間からの見え方を整える」と伝える。</strong>イメージで損をしやすい業界ほど響く。</li>
+    </ol>
+  </div>
+</section>
+
+<div class="note">
+  出典：初回・2回目商談の文字起こし（各約65分）、受注管理シート。<br>
+  社名・個人名・市区町村・競合名は伏せています。発言は文字起こしを読みやすく整えたものです。
+</div>
+
+</main>
+</body>
+</html>

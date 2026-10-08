@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>不動産サービス会社の受注事例</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b2430; --sub:#5b6675; --line:#e3e7ec; --bg:#f6f7f9; --card:#fff;
+  --navy:#16325c; --accent:#e8661c; --accent-soft:#fff1e8; --ok:#1f8a5b; --ok-soft:#e8f6ef;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;font-size:16px}
+a{color:var(--navy)}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px}
+.topbar{background:var(--card);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:52px;font-size:14px}
+.topbar a{text-decoration:none;font-weight:700}
+.badge-internal{font-size:12px;color:var(--sub)}
+
+.hero{background:var(--navy);color:#fff;padding:40px 0 36px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tag{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.14)}
+.tag.won{background:var(--accent)}
+.hero h1{font-size:26px;line-height:1.5;margin:0 0 14px;font-weight:900}
+.hero p.lead{margin:0;color:#d7e0ee;font-size:15px}
+
+section{margin:36px 0}
+h2{font-size:20px;margin:0 0 16px;padding-left:12px;border-left:5px solid var(--accent);line-height:1.4}
+h3{font-size:16px;margin:0 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.muted{color:var(--sub);font-size:14px}
+.lead-txt{margin:0 0 14px}
+
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.summary .card h3{font-size:13px;color:var(--accent);letter-spacing:.05em}
+.summary .card p{margin:0;font-size:15px}
+
+table.prof{width:100%;border-collapse:collapse;font-size:15px}
+table.prof th{width:30%;text-align:left;color:var(--sub);font-weight:500;padding:8px 0;border-bottom:1px solid var(--line);vertical-align:top}
+table.prof td{padding:8px 0;border-bottom:1px solid var(--line)}
+
+/* 課題→AIOが刺さった理由 */
+.fit{display:flex;flex-direction:column;gap:12px}
+.fit-row{display:grid;grid-template-columns:1fr 36px 1.25fr;align-items:stretch}
+.fit-row .pain,.fit-row .hit{border-radius:10px;padding:14px 16px;font-size:15px}
+.fit-row .pain{background:var(--card);border:1px solid var(--line)}
+.fit-row .hit{background:var(--accent-soft);border:1px solid #f3c9ae}
+.fit-row .arrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:900;font-size:20px}
+.fit-row .lbl{display:block;font-size:12px;font-weight:700;color:var(--sub);margin-bottom:2px}
+.fit-row .hit .lbl{color:var(--accent)}
+.fit-row .src{display:block;font-size:12px;color:var(--sub);margin-top:6px}
+
+/* 会話ログ */
+.mtg{font-size:15px;font-weight:900;color:#fff;background:var(--navy);border-radius:8px;padding:6px 14px;margin:6px 0 4px}
+.mtg span{font-weight:500;font-size:13px;color:#c8d3e4;margin-left:8px}
+.talk{display:flex;flex-direction:column;gap:10px}
+.scene{font-size:13px;font-weight:700;color:var(--navy);background:#e9eef6;border-radius:6px;padding:4px 12px;margin-top:10px;align-self:flex-start}
+.scene .time{font-family:ui-monospace,Consolas,monospace;font-weight:500;margin-right:6px;color:var(--sub)}
+.msg{max-width:86%;border-radius:12px;padding:10px 14px;font-size:15px}
+.msg .who{display:block;font-size:12px;font-weight:700;margin-bottom:2px}
+.msg.s{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--navy)}
+.msg.s .who{color:var(--navy)}
+.msg.c{align-self:flex-end;background:#fff8f3;border:1px solid #f3c9ae;border-right:4px solid var(--accent)}
+.msg.c .who{color:var(--accent)}
+.why{margin-top:2px;font-size:14px;color:var(--ok);background:var(--ok-soft);border-radius:6px;padding:8px 12px}
+.why b{margin-right:4px}
+.why.turn{color:#fff;background:var(--accent)}
+.kw{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.kw span{font-size:13px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:1px 10px}
+
+.notsaid{border-left:5px solid var(--sub)}
+
+/* timeline */
+.timeline{position:relative;margin-left:8px;padding-left:28px;border-left:2px solid var(--line)}
+.step{position:relative;margin-bottom:16px}
+.step::before{content:"";position:absolute;left:-36px;top:6px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--navy)}
+.step.turn::before{background:var(--accent);border-color:var(--accent);width:18px;height:18px;left:-38px;top:4px}
+.step .meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12px;color:var(--sub);margin-bottom:4px}
+.step .time{font-family:ui-monospace,Consolas,monospace;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:0 6px}
+.temp{font-weight:700;border-radius:4px;padding:0 6px}
+.temp.t1{background:#eef1f5;color:#5b6675}
+.temp.t2{background:#fff6d6;color:#8a6a00}
+.temp.t3{background:var(--accent-soft);color:var(--accent)}
+.step h3{font-size:16px}
+.step .card{padding:14px 18px;font-size:15px}
+.step.turn .card{border:2px solid var(--accent)}
+.turn-label{display:inline-block;background:var(--accent);color:#fff;font-size:12px;font-weight:900;padding:2px 10px;border-radius:4px;margin-bottom:6px}
+.divider{font-size:13px;font-weight:900;color:var(--navy);margin:22px 0 10px -28px;padding-left:28px}
+
+.thermo{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;align-items:end;height:130px;margin:6px 0 4px}
+.thermo .bar{background:#d9dfe7;border-radius:6px 6px 0 0;position:relative}
+.thermo .bar.hot{background:var(--accent)}
+.thermo .bar span{position:absolute;top:-20px;left:0;right:0;text-align:center;font-size:11px;color:var(--sub)}
+.thermo-l{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;font-size:11px;color:var(--sub);text-align:center;line-height:1.4}
+
+.phr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.phr ol{margin:0;padding-left:1.3em}
+.phr li{margin:8px 0;font-size:15px}
+.phr li small{display:block;color:var(--sub);font-size:12px}
+
+table.obj{width:100%;border-collapse:collapse;font-size:15px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+table.obj th,table.obj td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+table.obj thead th{background:var(--bg);font-size:13px;color:var(--sub)}
+
+.tips .card{border-left:5px solid var(--ok)}
+.tips ol{margin:0;padding-left:1.3em}
+.tips li{margin:8px 0}
+
+.note{font-size:13px;color:var(--sub);border-top:1px solid var(--line);padding:20px 0 40px;margin-top:40px}
+
+@media (max-width:720px){
+  .hero h1{font-size:21px}
+  .summary,.phr{grid-template-columns:1fr}
+  .fit-row{grid-template-columns:1fr}
+  .fit-row .arrow{transform:rotate(90deg);height:28px}
+  .msg{max-width:100%}
+  .thermo,.thermo-l{gap:3px}
+  .thermo-l{font-size:10px}
+  table.prof th{width:38%}
+  table.obj thead{display:none}
+  table.obj td{display:block;border-bottom:none;padding:6px 14px}
+  table.obj tr{display:block;border-bottom:1px solid var(--line);padding:8px 0}
+}
+@media print{.topbar{display:none}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <a href="../index.html">← AIO受注事例集</a>
+  <span class="badge-internal">事例 No.02</span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="tags">
+    <span class="tag won">受注</span>
+    <span class="tag">不動産</span>
+    <span class="tag">神奈川県</span>
+    <span class="tag">従業員 1〜5名</span>
+    <span class="tag">AIOマスター</span>
+  </div>
+  <h1>「ホームページは安心してもらうために作っただけ」。<br>創業直後の会社が、地域の検索データを見てAIOを決めるまで</h1>
+  <p class="lead">神奈川県で、賃貸住宅の原状回復の立会い代行や空き家管理を手がける創業したばかりの会社（代表1名）。リスティング広告だけでは問い合わせが増えず、「ネット集客をもっと早く進める方法はないか」と考えていた。</p>
+</div></header>
+
+<main class="wrap">
+
+<section>
+  <h2>3行でわかるこの事例</h2>
+  <div class="summary">
+    <div class="card"><h3>どんな課題</h3><p>創業直後で、集客はリスティング広告だけ。広告費をかけても問い合わせが伸びない。ホームページは「ちゃんとした会社だと安心してもらうため」に作っただけだった。</p></div>
+    <div class="card"><h3>どう刺さった</h3><p>AIOを「世の中の人が実際に何を検索しているか＝事実を手に入れる手段」と説明し、その場で地域の検索キーワードを見せた。代表自身が「この言葉は消費者ではなく管理会社が使う」と読み解いた。</p></div>
+    <div class="card"><h3>決め手</h3><p>融資の着金前で大きな初期費用は出せない状況に合わせ、SNS施策の中にAIOを<strong>追加費用なしで組み込み</strong>、無理のない形で入口づくりを始められるようにした。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>会社プロフィール</h2>
+  <div class="card">
+    <table class="prof">
+      <tr><th>所在地</th><td>神奈川県</td></tr>
+      <tr><th>事業内容</th><td>賃貸住宅の原状回復の立会い代行（入居者とオーナーの間に入り、適正な費用を提示する）。空き家の見回り・管理や、賃料見直しなどの不動産コンサルにも展開</td></tr>
+      <tr><th>会社規模</th><td>代表1名（2026年夏に設立）</td></tr>
+      <tr><th>商談相手</th><td>代表</td></tr>
+      <tr><th>集客の現状</th><td>リスティング広告のみ。問い合わせは数件から増えていない。インスタは毎日投稿しているが閲覧は10人前後。自分で管理会社にメールを送ったが反応はゼロ</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>どんな課題に、AIOマスターがどう刺さったか</h2>
+  <p class="lead-txt muted">左がお客様の課題、右がAIOマスターがその課題の答えとして受け止められた理由です。</p>
+  <div class="fit">
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 1</span>広告にお金をかけても問い合わせが増えない。「黙って集客できるのはリスティング広告しかない」状態。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>「勘ではなく事実で」。AIOは<strong>世の中が実際に検索している情報</strong>を手に入れて、打ち出し方を決めるものだと説明。むやみに投稿や広告を増やす前に、狙うべき言葉が分かる。<span class="src">3回目 14:34〜14:35</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 2</span>ホームページは「会ったあとに見て安心してもらうため」に作っただけ。集客には使えていない。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>「検索してヒットしない＝対象にならない。どんなに美しいホームページでも、検索される言葉が載っていなければ探されない」。代表自身も「検索で出たほうがいい」と考え始めていたところに合致した。<span class="src">3回目 14:36〜14:38</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 3</span>狙う相手は管理会社なのに、どうやって見つけてもらえばいいか分からない。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>その地域で実際に検索されているキーワードを画面共有。代表が「原状回復は消費者は使わない、<strong>管理会社が使う言葉</strong>」と読み解き、狙う相手と検索の言葉がつながった。<span class="src">3回目 14:41〜14:44</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 4</span>融資の着金前で、まとまった初期費用は出せない。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>一気に全部ではなく、負担の小さい形から。AIOはSNS施策と組み合わせ、<strong>追加費用なしで入口づくりを同時に始められる</strong>形にした。<span class="src">3回目〜受注</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>AIOマスターをどう説明したか（実際の会話）</h2>
+  <p class="lead-txt muted">AIOの話は3回目の商談で、上席が同席した場面に集中しています。SNSの提案を進めたあと、<strong>「なぜAIOが必要か」→「事実（検索データ）を見せる」→「お客様自身に読み解いてもらう」</strong>という順番でした。</p>
+  <div class="card">
+    <div class="mtg">3回目商談<span>担当営業・上席と代表／約65分</span></div>
+    <div class="talk">
+      <div class="scene"><span class="time">14:23</span>SNSの話のあと、AI検索の話を出す</div>
+      <div class="msg s"><span class="who">担当営業</span>集客をかけていくうえで、AI検索に載ってくるかどうかは、時代の流れも含めて皆さんお金をかけて気にしている部分です。このあたりの取り組みはまだですか。</div>
+      <div class="msg c"><span class="who">代表</span>リスティング広告しかやっていないです。AIOの話は、会社を作ったばかりのときにいろんなところから連絡があって、話だけは聞きました。面白いとは思ったんですけど、広告を始めたばかりで、あれもこれもやるのが正しいのか分からなくて。</div>
+      <div class="why"><b>ここが土台</b>「聞いたことはあるが、優先度が分からない」状態。ここで商品説明に入らず、上席が「なぜ必要か」から話した。</div>
+      <div class="scene"><span class="time">14:34</span>なぜAIOが必要か：強みと「事実」を合わせる</div>
+      <div class="msg s"><span class="who">上席</span>SNSで集客といっても、むやみに投稿したところで、集まるものも集まらなかったりします。なぜAIOが必要かというと、自分たちが打ち出したい強みが、世の中の人が実際に検索している・求めている「事実」と合っているか。その事実を得られるのがAIOなんです。</div>
+      <div class="msg s"><span class="who">上席</span>勘じゃなくて、事実でちゃんとやっていきましょう、というのが前提です。</div>
+      <div class="scene"><span class="time">14:36</span>検索されない＝探されない</div>
+      <div class="msg s"><span class="who">上席</span>今はGoogleとAIで何かを調べる人が4割ぐらいいます。逆に言うと、そこで検索されてヒットしない＝対象にならない。どんなに美しいホームページを作っても、検索される言葉が載っていなければ、お客様から探されることもないんです。</div>
+      <div class="msg c"><span class="who">代表</span>ホームページはもともと集客のためじゃなく、お客様に会ったあとに見てもらって安心してもらうために作ったんです。でもそれだけじゃもったいない。（地域名）と原状回復で検索したときにヒットしたほうがいいと思って、少しいじったところでした。</div>
+      <div class="why"><b>ポイント</b>代表が自分で考えはじめていた「検索で見つけてもらいたい」と、AIOの話がここで重なった。</div>
+      <div class="scene"><span class="time">14:41</span>その場で、地域の検索キーワードを見せる</div>
+      <div class="msg s"><span class="who">上席</span>（地域名）で、不動産管理まわりで実際に検索されている言葉です。</div>
+      <div class="kw"><span>原状回復 業者</span><span>原状回復 見積</span><span>賃貸 原状回復</span><span>賃貸管理</span></div>
+      <div class="msg c"><span class="who">代表</span>原状回復って言葉は、一般の消費者からはあまり出ないでしょう。管理会社みたいなプロが当たり前に使う言葉ですね。</div>
+      <div class="msg s"><span class="who">上席</span>検索している人がどんな課題を持っているかを理解して、SNSでもその言葉で発信する。そこにすごく意味があるんです。</div>
+      <div class="why turn"><b>★ 受注の流れに乗った瞬間</b>代表が検索データを、自分の顧客像（管理会社）で読み解き始めた。「誰に向けて、どの言葉で発信するか」が見えた。</div>
+      <div class="scene"><span class="time">14:50</span>受け止め</div>
+      <div class="msg s"><span class="who">上席</span>求めているものと、当社が提供できるもの。いかがですか。</div>
+      <div class="msg c"><span class="who">代表</span>こちらが希望している内容としては、まったくズレはないですね。</div>
+    </div>
+  </div>
+
+  <div class="card notsaid" style="margin-top:12px">
+    <h3>AIOの組み込み方</h3>
+    <p style="margin:0;font-size:15px">この商談で最大の論点は資金繰り（融資の着金時期）でした。上席は「いきなり高額をかけるのは重い」と判断し、負担の小さいところから始める提案に切り替えています。</p>
+    <p style="margin:8px 0 0;font-size:15px">最終的には、SNSの自動運用を軸に、AIOを<strong>追加費用なしで組み込む</strong>形で受注しました（受注直前の詰めは記録がありません）。</p>
+  </div>
+</section>
+
+<section>
+  <h2>提案の流れ（この順番で話した）</h2>
+  <div class="timeline">
+
+    <div class="divider">2回目商談</div>
+
+    <div class="step">
+      <div class="meta"><span class="time">10:01〜10:17</span><span class="temp t1">温度：中</span></div>
+      <h3>1. SNSは「手段の一つ」。代表の当たり前の知識が発信のネタになる</h3>
+      <div class="card">前回の後すぐにインスタとLINEを開設していた代表に、担当が「前回聞いた"長く住めば壁紙の負担はゼロになる"という話、あれを知っていたら本気で見積もりを頼んだ」と伝える。あわせて「最後にAIで検索してレコメンドされると、信頼度が増す時代」と一言触れた。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">10:23〜10:34</span><span class="temp t2">温度：一度下がる</span></div>
+      <h3>2. 融資前で初期費用が重い→無理に決めず、9月中旬に再設定</h3>
+      <div class="card">代表は「まず自分でやって、理解してから任せたい」。担当は分割案も出したうえで、無理に決めず次回を設定した。</div>
+    </div>
+
+    <div class="divider">3回目商談（上席が同席）</div>
+
+    <div class="step">
+      <div class="meta"><span class="time">14:10〜14:22</span><span class="temp t1">温度：中</span></div>
+      <h3>3. 近況を聞く：事業の広がりと、集客の手詰まり</h3>
+      <div class="card">空き家管理や賃料見直しにも事業を広げたこと、インスタは毎日投稿でも見られて10人ほど、リスティング広告も反応が増えず、管理会社へのメール営業は反応ゼロ、という状況を聞き切った。</div>
+    </div>
+
+    <div class="step turn">
+      <div class="meta"><span class="time">14:34〜14:44</span><span class="temp t3">温度：高</span></div>
+      <span class="turn-label">★ 受注の流れに乗った瞬間</span>
+      <h3>4. なぜAIOか→その場で地域の検索キーワードを見せる</h3>
+      <div class="card">「事実でやる」「検索されない＝探されない」と説明し、地域の検索データを画面共有。代表が「管理会社が使う言葉」と読み解いた（会話は上を参照）。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">14:45〜14:50</span><span class="temp t3">温度：高</span></div>
+      <h3>5. 狙う相手を数字で確認する</h3>
+      <div class="card">代表から「賃貸は平均4年ほどで入れ替わる。400戸を管理する会社とつながれば、年100件の原状回復が見込める」と、狙う管理会社の規模が数字で語られた。上席は「その相手に向けて発信し、AIで効率よくアプローチする」と整理した。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">14:51〜15:14</span><span class="temp t2">温度：中</span></div>
+      <h3>6. 資金の状況に合わせ、負担の小さい形から</h3>
+      <div class="card">代表「まとまった額を最初に出すのは不安」。上席は負担の小さいところから入る形を提案し、代表は「頭の部分がボンと減るなら、やらない手はない」と応じた。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">9月末</span><span class="temp t3">受注</span></div>
+      <h3>7. SNSの自動運用にAIOを組み込み、受注</h3>
+      <div class="card">SNSの自動運用を軸に、AIOを追加費用なしで組み込んで受注（最終の詰めは記録なし）。</div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>キーフレーズとお客様の反応</h2>
+  <div class="phr">
+    <div class="card">
+      <h3 style="color:var(--navy)">営業側が使った言葉</h3>
+      <ol>
+        <li>自分たちの強みが、世の中の人が実際に検索している事実と合っているか。それを得られるのがAIOです。<small>AIOを「事実を得る手段」として説明</small></li>
+        <li>勘じゃなくて、事実でやっていきましょう。<small>広告・投稿をむやみに増やす前に</small></li>
+        <li>検索してヒットしない＝対象にならない。どんなに美しいホームページでも、言葉が載っていなければ探されない。<small>HPを作っただけの会社に刺さる</small></li>
+        <li>検索している人の課題を理解して、その言葉で発信する。そこに意味がある。<small>SNSとAIOをつなぐ</small></li>
+        <li>最後にAIで検索してレコメンドされると、信頼度が増す時代です。<small>2回目、SNSの話の中で</small></li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--accent)">お客様の反応（温度が上がったサイン）</h3>
+      <ol>
+        <li>ホームページは安心してもらうために作っただけ。でもそれだけじゃもったいない。<small>自分から検索の重要性に気づいていた</small></li>
+        <li>原状回復って言葉は消費者は使わない。管理会社が使う言葉ですね。<small>検索データを自分で読み解く</small></li>
+        <li>希望している内容と、まったくズレはないですね。<small>提案を受け止めたサイン</small></li>
+        <li>昔の募集スタイルが今は通用しないのは、痛く感じている。<small>変化への危機感</small></li>
+        <li>頭の部分がボンと減るなら、やらない手はない。<small>負担の小さい入り方を示したとき</small></li>
+      </ol>
+    </div>
+  </div>
+  <p class="muted" style="margin:10px 0 0">※発言は文字起こしをもとに、意味を変えない範囲で読みやすく整えています。</p>
+</section>
+
+<section>
+  <h2>出てきた不安と切り返し</h2>
+  <table class="obj">
+    <thead><tr><th style="width:34%">お客様の不安</th><th>切り返し</th></tr></thead>
+    <tbody>
+      <tr><td>広告を始めたばかりで、あれもこれもやるのが正しいのか分からない</td><td>何をやるかの前に「何が検索されているか」という事実を見る。むやみに増やすのではなく、狙う言葉を先に決める。</td></tr>
+      <tr><td>ホームページは作ったが、集客は想定していなかった</td><td>作り直しではなく、検索される言葉を載せていけばよい。</td></tr>
+      <tr><td>融資の着金前で、まとまった初期費用は出せない</td><td>一気に始めず、負担の小さいものから。AIOはSNS施策に追加費用なしで組み込んだ。</td></tr>
+      <tr><td>SNSを使ったことがなく、効果がイメージできない</td><td>代表にとっての"当たり前"の知識が、知らない人には十分価値のある情報になる（2回目）。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="tips">
+  <h2>同じ業界でAIOを提案するときのポイント</h2>
+  <div class="card">
+    <ol>
+      <li><strong>創業直後・広告頼みの会社には「AIOは事実を得る手段」と伝える。</strong>何に投資すべきかを決める材料になる。</li>
+      <li><strong>ホームページを"会社案内"として作っただけの会社には「検索されない＝存在しない」を伝える。</strong>作り直しは不要、と添える。</li>
+      <li><strong>その場で地域×業種の検索キーワードを見せる。</strong>お客様が自分の顧客像で読み解き始めたら、流れに乗っている。</li>
+      <li><strong>相手が管理会社などプロの場合、検索の言葉もプロ用語になる。</strong>その言葉で発信する設計にする。</li>
+      <li><strong>資金に不安がある場合は、AIOを他の施策に組み込み、初期負担を小さくする。</strong></li>
+    </ol>
+  </div>
+</section>
+
+<div class="note">
+  出典：2回目・3回目商談の文字起こし（初回と受注直前の詰めは記録なし）、受注管理シート。<br>
+  社名・個人名・市区町村・競合名は伏せています。発言は文字起こしを読みやすく整えたものです。
+</div>
+
+</main>
+</body>
+</html>

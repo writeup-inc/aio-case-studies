@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>工務店の受注事例</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b2430; --sub:#5b6675; --line:#e3e7ec; --bg:#f6f7f9; --card:#fff;
+  --navy:#16325c; --accent:#e8661c; --accent-soft:#fff1e8; --ok:#1f8a5b; --ok-soft:#e8f6ef;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;font-size:16px}
+a{color:var(--navy)}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px}
+.topbar{background:var(--card);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:52px;font-size:14px}
+.topbar a{text-decoration:none;font-weight:700}
+.badge-internal{font-size:12px;color:var(--sub)}
+
+.hero{background:var(--navy);color:#fff;padding:40px 0 36px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tag{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.14)}
+.tag.won{background:var(--accent)}
+.hero h1{font-size:26px;line-height:1.5;margin:0 0 14px;font-weight:900}
+.hero p.lead{margin:0;color:#d7e0ee;font-size:15px}
+
+section{margin:36px 0}
+h2{font-size:20px;margin:0 0 16px;padding-left:12px;border-left:5px solid var(--accent);line-height:1.4}
+h3{font-size:16px;margin:0 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.muted{color:var(--sub);font-size:14px}
+.lead-txt{margin:0 0 14px}
+
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.summary .card h3{font-size:13px;color:var(--accent);letter-spacing:.05em}
+.summary .card p{margin:0;font-size:15px}
+
+table.prof{width:100%;border-collapse:collapse;font-size:15px}
+table.prof th{width:30%;text-align:left;color:var(--sub);font-weight:500;padding:8px 0;border-bottom:1px solid var(--line);vertical-align:top}
+table.prof td{padding:8px 0;border-bottom:1px solid var(--line)}
+
+/* 課題→AIOが刺さった理由 */
+.fit{display:flex;flex-direction:column;gap:12px}
+.fit-row{display:grid;grid-template-columns:1fr 36px 1.25fr;align-items:stretch}
+.fit-row .pain,.fit-row .hit{border-radius:10px;padding:14px 16px;font-size:15px}
+.fit-row .pain{background:var(--card);border:1px solid var(--line)}
+.fit-row .hit{background:var(--accent-soft);border:1px solid #f3c9ae}
+.fit-row .arrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:900;font-size:20px}
+.fit-row .lbl{display:block;font-size:12px;font-weight:700;color:var(--sub);margin-bottom:2px}
+.fit-row .hit .lbl{color:var(--accent)}
+.fit-row .src{display:block;font-size:12px;color:var(--sub);margin-top:6px}
+
+/* 会話ログ */
+.mtg{font-size:15px;font-weight:900;color:#fff;background:var(--navy);border-radius:8px;padding:6px 14px;margin:6px 0 4px}
+.mtg span{font-weight:500;font-size:13px;color:#c8d3e4;margin-left:8px}
+.talk{display:flex;flex-direction:column;gap:10px}
+.scene{font-size:13px;font-weight:700;color:var(--navy);background:#e9eef6;border-radius:6px;padding:4px 12px;margin-top:10px;align-self:flex-start}
+.scene .time{font-family:ui-monospace,Consolas,monospace;font-weight:500;margin-right:6px;color:var(--sub)}
+.msg{max-width:86%;border-radius:12px;padding:10px 14px;font-size:15px}
+.msg .who{display:block;font-size:12px;font-weight:700;margin-bottom:2px}
+.msg.s{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--navy)}
+.msg.s .who{color:var(--navy)}
+.msg.c{align-self:flex-end;background:#fff8f3;border:1px solid #f3c9ae;border-right:4px solid var(--accent)}
+.msg.c .who{color:var(--accent)}
+.why{margin-top:2px;font-size:14px;color:var(--ok);background:var(--ok-soft);border-radius:6px;padding:8px 12px}
+.why b{margin-right:4px}
+.why.turn{color:#fff;background:var(--accent)}
+.kw{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.kw span{font-size:13px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:1px 10px}
+
+.notsaid{border-left:5px solid var(--sub)}
+
+/* timeline */
+.timeline{position:relative;margin-left:8px;padding-left:28px;border-left:2px solid var(--line)}
+.step{position:relative;margin-bottom:16px}
+.step::before{content:"";position:absolute;left:-36px;top:6px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--navy)}
+.step.turn::before{background:var(--accent);border-color:var(--accent);width:18px;height:18px;left:-38px;top:4px}
+.step .meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12px;color:var(--sub);margin-bottom:4px}
+.step .time{font-family:ui-monospace,Consolas,monospace;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:0 6px}
+.temp{font-weight:700;border-radius:4px;padding:0 6px}
+.temp.t1{background:#eef1f5;color:#5b6675}
+.temp.t2{background:#fff6d6;color:#8a6a00}
+.temp.t3{background:var(--accent-soft);color:var(--accent)}
+.step h3{font-size:16px}
+.step .card{padding:14px 18px;font-size:15px}
+.step.turn .card{border:2px solid var(--accent)}
+.turn-label{display:inline-block;background:var(--accent);color:#fff;font-size:12px;font-weight:900;padding:2px 10px;border-radius:4px;margin-bottom:6px}
+.divider{font-size:13px;font-weight:900;color:var(--navy);margin:22px 0 10px -28px;padding-left:28px}
+
+.thermo{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;align-items:end;height:130px;margin:6px 0 4px}
+.thermo .bar{background:#d9dfe7;border-radius:6px 6px 0 0;position:relative}
+.thermo .bar.hot{background:var(--accent)}
+.thermo .bar span{position:absolute;top:-20px;left:0;right:0;text-align:center;font-size:11px;color:var(--sub)}
+.thermo-l{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;font-size:11px;color:var(--sub);text-align:center;line-height:1.4}
+
+.phr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.phr ol{margin:0;padding-left:1.3em}
+.phr li{margin:8px 0;font-size:15px}
+.phr li small{display:block;color:var(--sub);font-size:12px}
+
+table.obj{width:100%;border-collapse:collapse;font-size:15px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+table.obj th,table.obj td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+table.obj thead th{background:var(--bg);font-size:13px;color:var(--sub)}
+
+.tips .card{border-left:5px solid var(--ok)}
+.tips ol{margin:0;padding-left:1.3em}
+.tips li{margin:8px 0}
+
+.note{font-size:13px;color:var(--sub);border-top:1px solid var(--line);padding:20px 0 40px;margin-top:40px}
+
+@media (max-width:720px){
+  .hero h1{font-size:21px}
+  .summary,.phr{grid-template-columns:1fr}
+  .fit-row{grid-template-columns:1fr}
+  .fit-row .arrow{transform:rotate(90deg);height:28px}
+  .msg{max-width:100%}
+  .thermo,.thermo-l{gap:3px}
+  .thermo-l{font-size:10px}
+  table.prof th{width:38%}
+  table.obj thead{display:none}
+  table.obj td{display:block;border-bottom:none;padding:6px 14px}
+  table.obj tr{display:block;border-bottom:1px solid var(--line);padding:8px 0}
+}
+@media print{.topbar{display:none}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <a href="../index.html">← AIO受注事例集</a>
+  <span class="badge-internal">事例 No.06</span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="tags">
+    <span class="tag won">受注</span>
+    <span class="tag">建設・工事</span>
+    <span class="tag">東京都</span>
+    <span class="tag">従業員 1〜5名</span>
+    <span class="tag">AIOマスター</span>
+  </div>
+  <h1>「AIで聞いたら、うちが一番に出てきた」。<br>偶然の1件を"狙って取る"ために、工務店がAIOを決めるまで</h1>
+  <p class="lead">東京都の工務店（代表1名、職人は外注）。創業17年。自作のホームページでSEOに取り組んできた。初回の打ち合わせで、代表自身から「AI経由で契約に至ったお客様がいる」という話が出て、AIOを進めることになった。</p>
+</div></header>
+
+<main class="wrap">
+
+<section>
+  <h2>3行でわかるこの事例</h2>
+  <div class="summary">
+    <div class="card"><h3>どんな課題</h3><p>17年やっているのにデジタル集客が十分にできていない、という不甲斐なさ。SEOなどを任せる人を募集しても応募がない。</p></div>
+    <div class="card"><h3>どう刺さった</h3><p>「AIにレコメンドしてもらう対策は、SEOの先にあるもの」と説明した直後、代表から「<strong>AIで聞いたらうちが一番に出てきた、と言うお客様と契約した</strong>」という実体験が出た。</p></div>
+    <div class="card"><h3>決め手</h3><p>「偶然を放置せず、地域のAI検索を面で取りに行きましょう」。人を雇ってやろうとしていたSEOの代わりになり、人件費より安いと伝えた。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>会社プロフィール</h2>
+  <div class="card">
+    <table class="prof">
+      <tr><th>所在地</th><td>東京都</td></tr>
+      <tr><th>事業内容</th><td>工務店：注文住宅とリフォーム（今後は注文住宅を主体にしたい）</td></tr>
+      <tr><th>会社規模</th><td>代表1名。職人や業務は外注。創業17年</td></tr>
+      <tr><th>商談相手</th><td>代表</td></tr>
+      <tr><th>集客の現状</th><td>自作のHP（文章・写真も代表自身）とSEO。HPのリニューアル後から、問い合わせがぽつぽつ来るように。細かい修繕より、50万円以上の案件・注文住宅を増やしたい。遠方の現場への出張が多く、時間が足りない</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>どんな課題に、AIOマスターがどう刺さったか</h2>
+  <p class="lead-txt muted">左がお客様の課題、右がAIOマスターがその課題の答えとして受け止められた理由です。</p>
+  <div class="fit">
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 1</span>デジタル集客をやりたいが、1人で回しきれない。SEOを任せる人材を募集しても応募がない。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>AIOは最初の設定をすれば、あとはAIが回る。「<strong>人を雇ってやろうとしていたSEOの代わりになる。人件費で考えても得</strong>」。<span class="src">初回 18:42〜18:47</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 2</span>AI経由で来たお客様と契約できたが、たまたまで、狙って再現できない。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>「SEOを続けてきたからこそ出た成果。<strong>偶然を放置せず、地域のAI検索を面で取りに行く</strong>」。<span class="src">初回 18:22〜18:23、18:46</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 3</span>SNSもHP更新もできていないのに、AIOをやって意味があるのか。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>「受け皿がないなら別ですが、今のページに来てマイナスなことは1つもない。もっと良くはできるが、AIOを早くやるのはあり」。<span class="src">初回 18:44〜18:46</span></div>
+    </div>
+    <div class="fit-row">
+      <div class="pain"><span class="lbl">課題 4</span>狙いたいのは大きい案件（注文住宅・大型リフォーム）で、対応できるエリアも限られる。</div>
+      <div class="arrow">→</div>
+      <div class="hit"><span class="lbl">刺さった理由</span>「どんな質問で出てきてほしいか」を最大50問設定でき、対応エリアも市単位で絞れる。代表は「この区から問い合わせが来てもやらない」と、エリアを絞って登録した。<span class="src">2回目</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>AIOマスターをどう説明したか（実際の会話）</h2>
+  <p class="lead-txt muted">初回でAIOの説明をした直後に、代表から「AI経由で契約したお客様」の話が出ました。担当は<strong>その成果を認め、「狙って増やす」話に切り替え、土台への不安には「マイナスはない」と答える</strong>順番で進めています。</p>
+  <div class="card">
+    <div class="mtg">初回商談<span>担当営業と代表／約50分</span></div>
+    <div class="talk">
+      <div class="scene"><span class="time">18:17</span>SEO・MEOの次に、AIO</div>
+      <div class="msg s"><span class="who">担当営業</span>SEO、MEOと出てきて、もう1つ上がってきたのがAIOという概念です。個人が何かを調べるとき、SNSで情報収集するか、もう1つは自分が使っているAIに聞くか。</div>
+      <div class="msg s"><span class="who">担当営業</span>例えば「リフォームを検討しているけど、おすすめのところある？」と聞いたとき、AIはその人が住んでいる地域も分かるので、その周辺なら御社が出てくる。AIにレコメンドしてもらうための対策が、SEOとは別に取れるんです。SEOの先にあるものでもあります。</div>
+      <div class="scene"><span class="time">18:19</span>代表の実体験</div>
+      <div class="msg c"><span class="who">代表</span>実は3〜4か月前、まったく知らないお客様から連絡があったんです。築50年の家をフルリノベーションするか、建て替えるか迷っていると。どうやってうちを知ったのか聞いたら、AIで「（地域名）でフルリノベーションか建て替えか迷っている。どこの会社が適切でしょうか」と質問したら、うちの会社が一番に出てきた、と。1週間前に契約をいただきました。</div>
+      <div class="msg c"><span class="who">代表</span>今後そういう方は当然増えるだろうし、何かしら対策していかないといけないと感じています。</div>
+      <div class="why turn"><b>★ 受注の流れに乗った瞬間</b>担当が説明した「AIに薦められる」が、代表の目の前の契約と重なった。</div>
+      <div class="scene"><span class="time">18:22</span>その成果を"狙って"増やす</div>
+      <div class="msg s"><span class="who">担当営業</span>それは、今まで代表がSEO対策をやってきたからこそ出ている成果です。ただ、AIに選ばれるためには少し違う軸もあって、例えばnoteに記事を書くとか、第三者のところで推薦されていることが大事だったりします。</div>
+      <div class="msg s"><span class="who">担当営業</span>しかもSEOと違って、この領域はまだブルーオーシャン。実は当社も「補助金申請をサポートする業者を教えて」と聞くと一番に出てきて、問い合わせのきっかけを聞くと「ChatGPTです」ばかりだったんです。そこから逆算して商品にしたのがこの仕組みです。</div>
+      <div class="scene"><span class="time">18:44</span>迷い：土台ができていないのに？</div>
+      <div class="msg c"><span class="who">代表</span>SNSへの投稿も、ホームページの更新も何もできていない状況なんです。それなのにAIOを一生懸命やって意味があるのかなと。</div>
+      <div class="msg s"><span class="who">担当営業</span>全然、意味はあると思います。受け皿のページがないなら別ですが、今のページに来てマイナスなことは1つもない。もっと良くはできますが、AIOを早くやるのは全然ありです。成果が出ているなら、地域のAI検索を面で取りに行きましょう。</div>
+      <div class="msg s"><span class="who">担当営業</span>当初、人を雇ってやってもらおうと思っていたSEOの部分の代わりにもなります。人件費で考えても得だと思います。</div>
+      <div class="msg c"><span class="who">代表</span>いいかと思いますよ。AIでの施策は、何かしら進めていかないといけないと思っているので。</div>
+    </div>
+    <div class="mtg" style="margin-top:24px">2回目商談<span>担当営業と代表／約45分</span></div>
+    <div class="talk">
+      <div class="scene"><span class="time">18:04</span>実際の質問で見せる</div>
+      <div class="msg s"><span class="who">担当営業</span>例えば「（地域名）でおすすめのリフォーム会社を教えて」と聞くと、3社ぐらい出てきます。お客様がAIに聞いたときに出てきてほしい質問を先に考えておいて、そのワードを対策する。AIに出ているかどうかは、週3回自動でチェックします。</div>
+      <div class="msg s"><span class="who">担当営業</span>人を雇ってでも手を入れなきゃと思っていただいていたSEOに代わるものなので、ぴったりのタイミングでご提案できたと思っています。</div>
+      <div class="scene"><span class="time">18:19</span>対応エリアを絞る</div>
+      <div class="msg c"><span class="who">代表</span>対応しない区から問い合わせが来ても、うちは一切やらないんですけど。</div>
+      <div class="msg s"><span class="who">担当営業</span>エリアは5つまで登録できるので、実際に動ける市に絞りましょう。</div>
+    </div>
+  </div>
+
+  <div class="card notsaid" style="margin-top:12px">
+    <h3>補足</h3>
+    <p style="margin:0;font-size:15px">2回目の冒頭で、担当は「前回のお話を社内の営業会議で共有したら、先手必勝は間違いじゃないと盛り上がった」と伝えています。</p>
+    <p style="margin:8px 0 0;font-size:15px">価格はモニター条件（月額のみ・成果報酬なし、1年）で案内。カードの締め日の都合で、本登録は3回目に行いました。3回目では、AIOで増える問い合わせの受け皿として、公式LINE×AIの窓口も合わせて提案しています。</p>
+  </div>
+</section>
+
+<section>
+  <h2>商談の温度の変化（初回・約50分）</h2>
+  <div class="card">
+    <div class="thermo" aria-hidden="true" style="grid-template-columns:repeat(8,1fr)">
+      <div class="bar" style="height:30%"><span>低</span></div>
+      <div class="bar" style="height:35%"></div>
+      <div class="bar" style="height:55%"></div>
+      <div class="bar hot" style="height:92%"><span>★</span></div>
+      <div class="bar hot" style="height:85%"></div>
+      <div class="bar" style="height:50%"></div>
+      <div class="bar" style="height:80%"></div>
+      <div class="bar hot" style="height:88%"><span>高</span></div>
+    </div>
+    <div class="thermo-l" style="grid-template-columns:repeat(8,1fr)">
+      <div>現状の<br>悩み</div><div>人材<br>サービス</div><div>AIOの<br>説明</div><div>代表の<br>実体験</div><div>当社の<br>事例</div><div>土台への<br>不安</div><div>「意味は<br>ある」</div><div>次回へ</div>
+    </div>
+    <p class="muted" style="margin:12px 0 0">★が代表の実体験の場面。「土台ができていない」で一度下がったが、「マイナスはない」「人件費より得」で持ち直した。</p>
+  </div>
+</section>
+
+<section>
+  <h2>提案の流れ（この順番で話した）</h2>
+  <div class="timeline">
+
+    <div class="divider">初回商談</div>
+
+    <div class="step">
+      <div class="meta"><span class="time">18:05〜18:11</span><span class="temp t1">温度：低</span></div>
+      <h3>1. 現状：17年やっているのにデジタルができていない</h3>
+      <div class="card">代表から「IT化やSEOができていない状況を不甲斐なく思っている」「人もお金も足りない」という本音が出た。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">18:11〜18:17</span><span class="temp t1">温度：低</span></div>
+      <h3>2. 人材を派遣するサービスを先に紹介</h3>
+      <div class="card">SEOなどを任せたい人材の代わりとして紹介。代表は「何を頼むか決まってから」という反応だった。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">18:17〜18:19</span><span class="temp t2">温度：中</span></div>
+      <h3>3. SEO→MEO→AIOの順で説明</h3>
+      <div class="card">AIにレコメンドしてもらう対策はSEOの先にある、と説明した。</div>
+    </div>
+
+    <div class="step turn">
+      <div class="meta"><span class="time">18:19〜18:24</span><span class="temp t3">温度：高</span></div>
+      <span class="turn-label">★ 受注の流れに乗った瞬間</span>
+      <h3>4. 代表の実体験→「その成果を狙って増やす」</h3>
+      <div class="card">AI経由で契約したお客様の話が出た。担当はSEOの成果を認め、当社自身の事例で「まだブルーオーシャン」と伝えた（会話は上を参照）。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">18:41〜18:47</span><span class="temp t2">温度：一度下がる</span></div>
+      <h3>5. 土台への不安→「マイナスはない、人件費より得」</h3>
+      <div class="card">「SNSもHP更新もできていないのに意味があるのか」という不安に、今のページにマイナスはないこと、人を雇う代わりになることを伝え、「いいかと思いますよ」を引き出した。</div>
+    </div>
+
+    <div class="divider">2回目商談</div>
+
+    <div class="step">
+      <div class="meta"><span class="time">18:03〜18:06</span><span class="temp t3">温度：高</span></div>
+      <h3>6. 実際の質問で説明し、申込みへ</h3>
+      <div class="card">「（地域名）でおすすめのリフォーム会社を教えて」などの質問で、仕組みとモニター条件を説明した。</div>
+    </div>
+
+    <div class="step">
+      <div class="meta"><span class="time">18:17〜18:26</span><span class="temp t3">温度：高</span></div>
+      <h3>7. 申込み画面で対応エリアを絞る</h3>
+      <div class="card">対応しない地域を外し、実際に動ける市に絞って登録。カードの締め日の都合で、本登録は翌月初めに。</div>
+    </div>
+
+    <div class="divider">3回目商談</div>
+
+    <div class="step">
+      <div class="meta"><span class="time">16:03〜16:10</span><span class="temp t3">受注</span></div>
+      <h3>8. 本登録。受け皿として問い合わせ窓口も追加</h3>
+      <div class="card">AIOを本登録。AIOで増える問い合わせの受け皿として、公式LINE×AIの窓口も合わせて受注した。</div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>キーフレーズとお客様の反応</h2>
+  <div class="phr">
+    <div class="card">
+      <h3 style="color:var(--navy)">営業側が使った言葉</h3>
+      <ol>
+        <li>自分が使っているAIに聞く。AIにレコメンドしてもらう対策は、SEOの先にあるもの。<small>SEOに取り組んできた会社へ</small></li>
+        <li>それは、今までSEOをやってきたからこそ出ている成果です。<small>お客様の努力を認める</small></li>
+        <li>SEOと違って、この領域はまだブルーオーシャン。<small>先行者の価値</small></li>
+        <li>当社も「〇〇を教えて」でAIに一番に出て、問い合わせのきっかけは「ChatGPT」ばかりだった。<small>自社の体験を根拠に</small></li>
+        <li>今のページに来てマイナスなことは1つもない。AIOを早くやるのは全然あり。<small>土台への不安に対して</small></li>
+        <li>人を雇ってやろうとしていたSEOの代わりになる。人件費で考えても得。<small>採用に苦戦している会社へ</small></li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--accent)">お客様の反応（温度が上がったサイン）</h3>
+      <ol>
+        <li>17年やっているのに、デジタルができていないのが不甲斐ない。<small>本音の課題</small></li>
+        <li>AIで聞いたら、うちの会社が一番に出てきたって言うんですよ。<small>決め手になった実体験</small></li>
+        <li>今後そういう方は当然増える。何かしら対策していかないといけない。<small>自分から必要性を語る</small></li>
+        <li>AIでの施策は、何かしら進めていかないといけない。<small>決断</small></li>
+        <li>対応しない区から問い合わせが来ても、うちはやらない。<small>エリアを絞る</small></li>
+      </ol>
+    </div>
+  </div>
+  <p class="muted" style="margin:10px 0 0">※発言は文字起こしをもとに、意味を変えない範囲で読みやすく整えています。</p>
+</section>
+
+<section>
+  <h2>出てきた不安と切り返し</h2>
+  <table class="obj">
+    <thead><tr><th style="width:34%">お客様の不安</th><th>切り返し</th></tr></thead>
+    <tbody>
+      <tr><td>SNSもHP更新もできていないのに、AIOをやって意味があるのか</td><td>受け皿のページにマイナスがなければ、AIOを先に始めてよい。並行して整えればよい。</td></tr>
+      <tr><td>人を雇ってSEOをやってもらうつもりだった</td><td>応募が来ない今、AIOがその代わりになる。人件費より安い。</td></tr>
+      <tr><td>遠方の地域から問い合わせが来ても対応できない</td><td>対応エリアを市単位で設定して、狙う地域を絞る。</td></tr>
+      <tr><td>カードの締め日の都合で、支払いを翌月にしたい</td><td>申込みの日をずらして対応した。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="tips">
+  <h2>同じ業界でAIOを提案するときのポイント</h2>
+  <div class="card">
+    <ol>
+      <li><strong>「AI経由で来たお客様はいませんか」と必ず聞く。</strong>いれば、それが一番の説得材料になる。</li>
+      <li><strong>SEOに取り組んできた会社には、これまでの努力を認めてから「その延長にAIOがある」と話す。</strong></li>
+      <li><strong>「土台ができていないのに」と言われたら、今のページにマイナスがないかで判断し、先に始めてよいと伝える。</strong></li>
+      <li><strong>人材採用に苦戦している会社には「人を雇う代わり」という比較が響く。</strong></li>
+      <li><strong>自社がAI経由で問い合わせを得ている体験談は、強い根拠になる。</strong></li>
+    </ol>
+  </div>
+</section>
+
+<div class="note">
+  出典：初回・2回目・3回目商談の文字起こし、受注管理シート。<br>
+  社名・個人名・市区町村・競合名は伏せています。発言は文字起こしを読みやすく整えたものです。
+</div>
+
+</main>
+</body>
+</html>

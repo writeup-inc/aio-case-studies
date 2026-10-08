@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AIO受注事例集</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b2430; --sub:#5b6675; --line:#e3e7ec; --bg:#f6f7f9; --card:#fff;
+  --navy:#16325c; --accent:#e8661c; --accent-soft:#fff1e8;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hero{background:var(--navy);color:#fff;padding:44px 0 40px}
+.hero .eyebrow{font-size:13px;font-weight:700;color:#f6b48a;letter-spacing:.08em}
+.hero h1{font-size:30px;margin:6px 0 10px;font-weight:900}
+.hero p{margin:0;color:#d7e0ee;max-width:640px}
+
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-top:-24px;box-shadow:0 6px 24px rgba(22,50,92,.08)}
+.search{width:100%;font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+.search:focus{outline:2px solid var(--navy);background:#fff}
+.frow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:14px}
+.frow .lbl{font-size:13px;font-weight:700;color:var(--sub);width:84px;flex-shrink:0}
+.chip{font:inherit;font-size:14px;padding:5px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.count{margin:22px 0 12px;font-size:14px;color:var(--sub)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;padding-bottom:48px}
+.case{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;color:inherit;transition:box-shadow .15s,transform .15s}
+.case:hover{box-shadow:0 8px 24px rgba(22,50,92,.12);transform:translateY(-2px)}
+.case .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.tag{font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;background:var(--bg);color:var(--sub)}
+.tag.ind{background:var(--accent-soft);color:var(--accent)}
+.case h2{font-size:17px;line-height:1.55;margin:0 0 10px}
+.case .key{font-size:14px;color:var(--sub);margin:0 0 14px;flex:1}
+.case .key b{color:var(--ink)}
+.case .foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:10px;font-size:13px}
+.case .prod{font-weight:700;color:var(--navy)}
+.empty{padding:40px;text-align:center;color:var(--sub);background:var(--card);border:1px dashed var(--line);border-radius:12px}
+.foot-note{font-size:13px;color:var(--sub);border-top:1px solid var(--line);padding:18px 0 36px}
+@media (max-width:640px){
+  .hero h1{font-size:24px}
+  .frow .lbl{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">AIO CASE STUDIES</div>
+  <h1>AIO受注事例集</h1>
+  <p>どの業界の、どんな会社に、どんな順番で提案したら受注につながったのか。商談の流れと、受注の流れに乗った瞬間のキーフレーズ・お客様の反応をまとめています。</p>
+</div></header>
+
+<main class="wrap">
+  <div class="panel">
+    <input id="q" class="search" type="search" placeholder="キーワードで探す（例：見積もり、LINE、口コミ）" aria-label="キーワード検索">
+    <div class="frow" id="f-ind"><span class="lbl">事業内容</span></div>
+    <div class="frow" id="f-size"><span class="lbl">会社規模</span></div>
+  </div>
+
+  <p class="count" id="count"></p>
+  <div class="grid" id="grid"></div>
+
+  <div class="foot-note">社名・個人名・市区町村は伏せ、所在地は都道府県、事業内容は業種のみを記載しています。</div>
+</main>
+
+<script>
+// 事例データ。1社追加するごとに1件足す。
+const CASES = [
+  {
+    href: "cases/case-01.html",
+    industry: "建設・工事",
+    business: "解体工事",
+    pref: "長野県",
+    size: "6〜20名",
+    product: "AIOマスター",
+    title: "「地図検索で一番に出たい」解体工事会社に、その先の“AI検索”を実演で見せてAIOマスターを受注",
+    key: "課題は<b>マッチングサイトからの受注減</b>。初回はAI検索で競合ばかりが出る画面を実演、2回目は地域の検索キーワードで「やれば上がる」を示した。",
+    words: "AI検索 MEO SEO 地図検索 口コミ 参照元 見え方 実演 検索キーワード マッチングサイト 紹介 補助金 ブランド イメージ 組み込み 決裁者同席"
+  },
+  {
+    href: "cases/case-02.html",
+    industry: "不動産",
+    business: "原状回復の立会い代行・空き家管理",
+    pref: "神奈川県",
+    size: "1〜5名",
+    product: "AIOマスター（SNS施策と同時受注）",
+    title: "「ホームページは安心してもらうために作っただけ」。創業直後の不動産サービス会社が、地域の検索データを見てAIOを決めるまで",
+    key: "課題は<b>広告に頼った集客</b>。AIOを「世の中が実際に検索している事実を得る手段」と説明し、地域の検索キーワードをその場で見せた。",
+    words: "原状回復 管理会社 空き家 リスティング広告 SNS 検索キーワード 事実 創業 融資 組み込み"
+  },
+  {
+    href: "cases/case-03.html",
+    industry: "コンサルティング",
+    business: "中小企業の経営コンサル・事業承継支援",
+    pref: "東京都",
+    size: "1〜5名",
+    product: "AIOマスター（SNS施策と同時受注）",
+    title: "「誰に相談すればいい？」までAIに聞く時代。事業承継コンサルが\"相談先として薦められる\"ためにAIOを選ぶまで",
+    key: "課題は<b>経営者に知ってもらい、信用してもらうこと</b>。ChatGPTに悩みを壁打ちし、そのまま相談先を推薦される流れを実演した。",
+    words: "事業承継 後継者 経営者 コンサル オンライン講座 壁打ち 推薦 SNS X Threads テキスト"
+  },
+  {
+    href: "cases/case-04.html",
+    industry: "不動産",
+    business: "不動産売買仲介・相続/資産相談",
+    pref: "大阪府",
+    size: "1〜5名",
+    product: "AIOマスター",
+    title: "「売りたい人の情報が一番ほしい」。紹介頼みの不動産会社が、AIからの紹介導線を\"資産\"として持つと決めるまで",
+    key: "課題は<b>新規の売却相談が月0件</b>。代表自身の「お客様はAIに業者を紹介してもらっている」という気づきを、そのまま形にした。",
+    words: "売却 仕入れ 相続 資産 リゾート 紹介 ポータル 壁打ち 先行者 資産として残る モニター"
+  },
+  {
+    href: "cases/case-05.html",
+    industry: "不動産",
+    business: "事業用不動産の賃貸仲介",
+    pref: "大阪府",
+    size: "1〜5名",
+    product: "AIOマスター",
+    title: "「依頼はまだ早い」から1時間で「圧倒的にAIOです」。事業用不動産の仲介会社が、AIへの\"壁打ち\"の先に自社を置くと決めるまで",
+    key: "課題は<b>物件（オーナー）の仕入れ</b>。一度は迷ったが、「相続した不動産を壁打ちした末の業者選び」の話で一気に前向きに。",
+    words: "仕入れ オーナー 店舗 美容室 一括査定 SEO 壁打ち 相続 ブラックボックス 中小の勝ち筋"
+  },
+  {
+    href: "cases/case-06.html",
+    industry: "建設・工事",
+    business: "工務店（注文住宅・リフォーム）",
+    pref: "東京都",
+    size: "1〜5名",
+    product: "AIOマスター（問い合わせ窓口施策と同時受注）",
+    title: "「AIで聞いたら、うちが一番に出てきた」。偶然の1件を\"狙って取る\"ために、工務店がAIOを決めるまで",
+    key: "課題は<b>1人で回しきれないデジタル集客</b>。代表自身の「AI経由で契約したお客様」の話を起点に、偶然を狙いに変える提案をした。",
+    words: "工務店 注文住宅 リフォーム SEO 採用 人手不足 AI経由 契約 ブルーオーシャン エリア 人件費"
+  },
+  {
+    href: "cases/case-07.html",
+    industry: "建設・工事",
+    business: "電気工事（EV充電設備）",
+    pref: "兵庫県",
+    size: "1〜5名",
+    product: "AIOマスター",
+    title: "ChatGPT経由の問い合わせが\"たまたま\"1件。EV充電工事で先行する電気工事会社が、偶然を狙いに変えるまで",
+    key: "課題は<b>追いつかれ始めた主力工事</b>。AI経由の1件を起点に「どんな質問で出るかを把握して、取りたい工事で露出を増やす」と提案した。",
+    words: "電気工事 EV 充電器 先行者 ChatGPT経由 MEO 口コミ YouTube 商圏 指示書 資産"
+  }
+];
+
+const SIZES = ["1〜5名","6〜20名","21〜50名","51名以上"];
+const state = { q:"", ind:"すべて", size:"すべて" };
+
+function chips(el, key, values){
+  ["すべて", ...values].forEach(v=>{
+    const b=document.createElement("button");
+    b.type="button"; b.className="chip"; b.textContent=v;
+    b.setAttribute("aria-pressed", String(state[key]===v));
+    b.onclick=()=>{ state[key]=v; el.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed", String(c===b))); render(); };
+    el.appendChild(b);
+  });
+}
+
+function render(){
+  const q=state.q.trim().toLowerCase();
+  const hit=CASES.filter(c=>
+    (state.ind==="すべて"||c.industry===state.ind) &&
+    (state.size==="すべて"||c.size===state.size) &&
+    (!q || [c.industry,c.business,c.pref,c.product,c.title,c.key,c.words].join(" ").toLowerCase().includes(q))
+  );
+  document.getElementById("count").textContent = `${hit.length}件 / 全${CASES.length}件`;
+  const g=document.getElementById("grid");
+  if(!hit.length){ g.innerHTML='<div class="empty">条件に合う事例がありません。条件をゆるめてみてください。</div>'; return; }
+  g.innerHTML=hit.map(c=>`
+    <a class="case" href="${c.href}">
+      <div class="tags">
+        <span class="tag ind">${c.industry}</span>
+        <span class="tag">${c.business}</span>
+        <span class="tag">${c.pref}</span>
+        <span class="tag">従業員 ${c.size}</span>
+      </div>
+      <h2>${c.title}</h2>
+      <p class="key">${c.key}</p>
+      <div class="foot"><span class="prod">${c.product}</span></div>
+    </a>`).join("");
+}
+
+chips(document.getElementById("f-ind"), "ind", [...new Set(CASES.map(c=>c.industry))]);
+chips(document.getElementById("f-size"), "size", SIZES);
+document.getElementById("q").addEventListener("input", e=>{ state.q=e.target.value; render(); });
+render();
+</script>
+</body>
+</html>
