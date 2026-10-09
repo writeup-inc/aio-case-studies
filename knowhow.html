@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AIO受注ノウハウまとめ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b2430; --sub:#5b6675; --line:#e3e7ec; --bg:#f6f7f9; --card:#fff;
+  --navy:#16325c; --accent:#e8661c; --accent-soft:#fff1e8; --ok:#1f8a5b; --ok-soft:#e8f6ef;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;font-size:16px}
+a{color:var(--navy)}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px}
+.topbar{background:var(--card);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:52px;font-size:14px}
+.topbar a{text-decoration:none;font-weight:700}
+.badge-internal{font-size:12px;color:var(--sub)}
+
+.hero{background:var(--navy);color:#fff;padding:40px 0 36px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tag{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.14)}
+.tag.won{background:var(--accent)}
+.hero h1{font-size:26px;line-height:1.5;margin:0 0 14px;font-weight:900}
+.hero p.lead{margin:0;color:#d7e0ee;font-size:15px}
+
+section{margin:36px 0}
+h2{font-size:20px;margin:0 0 16px;padding-left:12px;border-left:5px solid var(--accent);line-height:1.4}
+h3{font-size:16px;margin:0 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.muted{color:var(--sub);font-size:14px}
+.lead-txt{margin:0 0 14px}
+
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.summary .card h3{font-size:13px;color:var(--accent);letter-spacing:.05em}
+.summary .card p{margin:0;font-size:15px}
+
+table.prof{width:100%;border-collapse:collapse;font-size:15px}
+table.prof th{width:30%;text-align:left;color:var(--sub);font-weight:500;padding:8px 0;border-bottom:1px solid var(--line);vertical-align:top}
+table.prof td{padding:8px 0;border-bottom:1px solid var(--line)}
+
+/* 課題→AIOが刺さった理由 */
+.fit{display:flex;flex-direction:column;gap:12px}
+.fit-row{display:grid;grid-template-columns:1fr 36px 1.25fr;align-items:stretch}
+.fit-row .pain,.fit-row .hit{border-radius:10px;padding:14px 16px;font-size:15px}
+.fit-row .pain{background:var(--card);border:1px solid var(--line)}
+.fit-row .hit{background:var(--accent-soft);border:1px solid #f3c9ae}
+.fit-row .arrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:900;font-size:20px}
+.fit-row .lbl{display:block;font-size:12px;font-weight:700;color:var(--sub);margin-bottom:2px}
+.fit-row .hit .lbl{color:var(--accent)}
+.fit-row .src{display:block;font-size:12px;color:var(--sub);margin-top:6px}
+
+/* 会話ログ */
+.mtg{font-size:15px;font-weight:900;color:#fff;background:var(--navy);border-radius:8px;padding:6px 14px;margin:6px 0 4px}
+.mtg span{font-weight:500;font-size:13px;color:#c8d3e4;margin-left:8px}
+.talk{display:flex;flex-direction:column;gap:10px}
+.scene{font-size:13px;font-weight:700;color:var(--navy);background:#e9eef6;border-radius:6px;padding:4px 12px;margin-top:10px;align-self:flex-start}
+.scene .time{font-family:ui-monospace,Consolas,monospace;font-weight:500;margin-right:6px;color:var(--sub)}
+.msg{max-width:86%;border-radius:12px;padding:10px 14px;font-size:15px}
+.msg .who{display:block;font-size:12px;font-weight:700;margin-bottom:2px}
+.msg.s{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--navy)}
+.msg.s .who{color:var(--navy)}
+.msg.c{align-self:flex-end;background:#fff8f3;border:1px solid #f3c9ae;border-right:4px solid var(--accent)}
+.msg.c .who{color:var(--accent)}
+.why{margin-top:2px;font-size:14px;color:var(--ok);background:var(--ok-soft);border-radius:6px;padding:8px 12px}
+.why b{margin-right:4px}
+.why.turn{color:#fff;background:var(--accent)}
+.kw{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.kw span{font-size:13px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:1px 10px}
+
+.notsaid{border-left:5px solid var(--sub)}
+
+/* timeline */
+.timeline{position:relative;margin-left:8px;padding-left:28px;border-left:2px solid var(--line)}
+.step{position:relative;margin-bottom:16px}
+.step::before{content:"";position:absolute;left:-36px;top:6px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--navy)}
+.step.turn::before{background:var(--accent);border-color:var(--accent);width:18px;height:18px;left:-38px;top:4px}
+.step .meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12px;color:var(--sub);margin-bottom:4px}
+.step .time{font-family:ui-monospace,Consolas,monospace;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:0 6px}
+.temp{font-weight:700;border-radius:4px;padding:0 6px}
+.temp.t1{background:#eef1f5;color:#5b6675}
+.temp.t2{background:#fff6d6;color:#8a6a00}
+.temp.t3{background:var(--accent-soft);color:var(--accent)}
+.step h3{font-size:16px}
+.step .card{padding:14px 18px;font-size:15px}
+.step.turn .card{border:2px solid var(--accent)}
+.turn-label{display:inline-block;background:var(--accent);color:#fff;font-size:12px;font-weight:900;padding:2px 10px;border-radius:4px;margin-bottom:6px}
+.divider{font-size:13px;font-weight:900;color:var(--navy);margin:22px 0 10px -28px;padding-left:28px}
+
+.thermo{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;align-items:end;height:130px;margin:6px 0 4px}
+.thermo .bar{background:#d9dfe7;border-radius:6px 6px 0 0;position:relative}
+.thermo .bar.hot{background:var(--accent)}
+.thermo .bar span{position:absolute;top:-20px;left:0;right:0;text-align:center;font-size:11px;color:var(--sub)}
+.thermo-l{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;font-size:11px;color:var(--sub);text-align:center;line-height:1.4}
+
+.phr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.phr ol{margin:0;padding-left:1.3em}
+.phr li{margin:8px 0;font-size:15px}
+.phr li small{display:block;color:var(--sub);font-size:12px}
+
+table.obj{width:100%;border-collapse:collapse;font-size:15px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+table.obj th,table.obj td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+table.obj thead th{background:var(--bg);font-size:13px;color:var(--sub)}
+
+.tips .card{border-left:5px solid var(--ok)}
+.tips ol{margin:0;padding-left:1.3em}
+.tips li{margin:8px 0}
+
+.note{font-size:13px;color:var(--sub);border-top:1px solid var(--line);padding:20px 0 40px;margin-top:40px}
+
+@media (max-width:720px){
+  .hero h1{font-size:21px}
+  .summary,.phr{grid-template-columns:1fr}
+  .fit-row{grid-template-columns:1fr}
+  .fit-row .arrow{transform:rotate(90deg);height:28px}
+  .msg{max-width:100%}
+  .thermo,.thermo-l{gap:3px}
+  .thermo-l{font-size:10px}
+  table.prof th{width:38%}
+  table.obj thead{display:none}
+  table.obj td{display:block;border-bottom:none;padding:6px 14px}
+  table.obj tr{display:block;border-bottom:1px solid var(--line);padding:8px 0}
+}
+@media print{.topbar{display:none}body{background:#fff}}
+
+.top3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.top3 .card{border-top:5px solid var(--accent)}
+.top3 .n{font-size:13px;font-weight:900;color:var(--accent)}
+.top3 p{margin:4px 0 0;font-size:16px;font-weight:700;line-height:1.6}
+.kl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.kl li{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:10px;padding:12px 16px}
+.kl li .w{font-weight:700;font-size:16px}
+.kl li .d{display:block;font-size:14px;color:var(--sub);margin-top:4px}
+.kl li .c{display:inline-block;font-size:12px;color:var(--navy);background:#e9eef6;border-radius:999px;padding:0 8px;margin-left:6px;vertical-align:2px}
+h3.sub{font-size:15px;color:var(--navy);margin:22px 0 10px}
+.act{counter-reset:a;display:flex;flex-direction:column;gap:12px}
+.act .card h3{font-size:17px}
+.act .card p,.act .card li{font-size:15px}
+.act .card ul{margin:6px 0 0;padding-left:1.2em}
+.star{display:inline-block;background:var(--accent);color:#fff;font-size:12px;font-weight:900;padding:1px 8px;border-radius:4px;margin-left:6px;vertical-align:2px}
+@media (max-width:720px){.top3{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <a href="index.html">← AIO受注事例集（社内・正規パートナー向け）</a>
+  <span class="badge-internal">受注ノウハウまとめ</span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="tags"><span class="tag won">7社の商談から抽出</span><span class="tag">キラーワード</span><span class="tag">行動</span><span class="tag">クロージング</span></div>
+  <h1>AIO受注ノウハウまとめ<br>絶対に外せない言葉と行動</h1>
+  <p class="lead">受注した7社の商談ログから、AIOマスターの提案で効いたキラーワード・行動・クロージングの型を抜き出しました。（ ）内の番号は事例集の事例番号です。</p>
+</div></header>
+
+<main class="wrap">
+
+<section>
+  <h2>1枚に絞るならこの3つ</h2>
+  <div class="top3">
+    <div class="card"><div class="n">01</div><p>その場でAIに聞いて見せる</p><p class="muted" style="font-weight:400;font-size:14px">「（地域名）で（業種）のおすすめは？」をChatGPTで実演。競合ばかりが出る画面を一緒に見る。</p></div>
+    <div class="card"><div class="n">02</div><p>「AIに聞いたことありますか？AI経由の問い合わせはありましたか？」と聞く</p><p class="muted" style="font-weight:400;font-size:14px">お客様自身の体験が、いちばんの説得材料になる。</p></div>
+    <div class="card"><div class="n">03</div><p>「営業マンの言うことは信じないけど、AIの言うことは信じる」</p><p class="muted" style="font-weight:400;font-size:14px">AIOの価値を一言で伝えるキラーワード。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>A. キラーワード（そのまま使える言葉）</h2>
+
+  <h3 class="sub">AIOがなぜ必要かを伝える言葉</h3>
+  <ul class="kl">
+    <li><span class="w">「営業マンが言うことは信じないけど、AIが言った話は信じるんですよ」</span><span class="c">01・05</span><span class="star">いちばん効く</span><span class="d">営業マンがすすめても信じてもらえないが、AIの推薦は第三者のおすすめとして信じてもらえる。</span></li>
+    <li><span class="w">「検索してヒットしない＝対象にならない。どんなに美しいホームページでも、検索される言葉が載っていなければ探されない」</span><span class="c">02</span></li>
+    <li><span class="w">「AIは、ネット上の情報を探しに行って抜き出しているだけ」</span><span class="c">05</span><span class="d">AIOが難しいものではないと伝わる。</span></li>
+    <li><span class="w">「高額なものは即決にならない。だから第三者からの評価が大事」</span><span class="c">04</span><span class="d">不動産・住宅・工事など、単価の高い業種に効く。</span></li>
+  </ul>
+
+  <h3 class="sub">「お客様がどうやってAIに聞いているか」を伝える言葉</h3>
+  <ul class="kl">
+    <li><span class="w">「困ったら、AIに壁打ちするんです。その果てに『どこに頼めばいい？』となる。そこに御社が出れば、問い合わせに間違いなくつながる」</span><span class="c">03・05</span><span class="star">決め手になった回数No.1</span></li>
+    <li><span class="w">「AIへの質問は検索ではなく会話。後半で会社名が出てくる」</span><span class="d">「地域名＋業種」のような検索キーワードではなく、会話の流れの中でおすすめが出てくる。</span></li>
+    <li><span class="w">「AIで壁打ちしてきたお客様は、求めているものが固まった状態で来る。1からヒアリングしなくていいし、受注率が高い」</span><span class="c">04・07</span><span class="d">問い合わせの数だけでなく、質も上がると伝えられる。</span></li>
+    <li><span class="w">「いきなり相談するとがっつり営業されると分かっているから、まずAIに聞きたいんです」</span><span class="c">05</span></li>
+  </ul>
+
+  <h3 class="sub">今すぐやる理由を伝える言葉</h3>
+  <ul class="kl">
+    <li><span class="w">「まだほとんどの会社が対策していない。先に取られると、後から抜くには相当お金がかかる」</span><span class="c">04・07</span></li>
+    <li><span class="w">「SEOはお金と時間をかければ上がる。AIOはブラックボックスだからこそ、中小にも勝ち筋がある」</span><span class="c">05</span></li>
+    <li><span class="w">「広告に垂れ流すのではなく、ネット上に資産として残る。1年でやめても情報は残る」</span><span class="c">04・07</span></li>
+    <li><span class="w">「ホームページの作り直しは不要。検索される言葉を足すだけ」</span><span class="c">01・02</span></li>
+  </ul>
+
+  <h3 class="sub">お客様の状況に合わせて使う言葉</h3>
+  <ul class="kl">
+    <li><span class="w">地図検索（MEO）の話が出たら：「それも大事。でも、やった先はAI検索に載るかどうかにつながる」</span><span class="c">01</span><span class="d">お客様の考えを否定せず、ゴールを一段先に置き直す。</span></li>
+    <li><span class="w">SEOに取り組んできた会社には：「それは今までSEOをやってきたからこその成果です」</span><span class="c">06</span><span class="d">まずこれまでの努力を認めてから、AIOの話に入る。</span></li>
+    <li><span class="w">AI経由の問い合わせが1件あった会社には：「何も対策していないのに、AIが御社を推薦した可能性がある。放置せず、どんな質問で出るかを把握して、取りたい仕事で意図的に増やしましょう」</span><span class="c">07</span></li>
+    <li><span class="w">強みが伝わっていない会社には：「その強みを、AIが正しく理解できているかが問題なんです」</span><span class="c">04</span></li>
+    <li><span class="w">ホームページ更新やSNSができていない、と不安がる会社には：「今のページに来てマイナスなことは1つもない。AIOは先に始めていい」</span><span class="c">06</span></li>
+    <li><span class="w">採用に苦戦している会社には：「人を雇ってやろうとしていたSEOの代わりになる。人件費で考えても得」</span><span class="c">06</span></li>
+    <li><span class="w">SNSの施策と一緒に提案するときは：「AIに拾われるのはネット上のテキスト。SNSで発信すること自体がAIOの対策になる」</span><span class="c">03</span></li>
+    <li><span class="w">「勘じゃなく、事実でやりましょう」</span><span class="c">02</span><span class="d">AIOを「世の中が実際に何を検索しているか」を知る手段として伝える。</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>B. 絶対に外せない行動</h2>
+  <div class="act">
+    <div class="card"><h3>1. その場でAIに聞いて見せる<span class="star">最重要</span></h3>
+      <ul>
+        <li>「（地域名）で（業種）のおすすめは？」を、商談中にChatGPTで実際に聞く（01・05・03）。</li>
+        <li>自社が出ずに競合ばかりが出る画面を、お客様と一緒に見る。説明を10分するより、実演1回のほうが伝わる。</li>
+        <li>推薦の参照元（どのサイトの情報か）まで一緒に見る（01）。お客様が自分で原因を探し始めたら、受注の流れに乗っている。</li>
+      </ul></div>
+    <div class="card"><h3>2. 「AIに聞いたことはありますか」「AI経由の問い合わせはありましたか」を必ず聞く</h3>
+      <p style="margin:0">お客様自身の体験に勝る説得材料はない。お客様が自分の体験を話し始めたら、ほぼ決まる。</p>
+      <ul>
+        <li>06：「AIで聞いたら、うちが一番に出てきた」というお客様と契約していた</li>
+        <li>07：ChatGPT経由の問い合わせがすでに1件あった</li>
+        <li>04：代表が「お客様はAIで業者を探している」と自分で気づいていた</li>
+        <li>05：代表に「自分も壁打ちしてるかも」と気づかせた</li>
+      </ul></div>
+    <div class="card"><h3>3. 地域×業種の検索データを見せる</h3>
+      <p style="margin:0">地域で実際に検索されている言葉を見せ（01・02）、お客様自身に読み解いてもらう。02では、代表が「原状回復は消費者ではなく管理会社が使う言葉だ」と読み解き、狙うお客様と検索の言葉がつながった。</p></div>
+    <div class="card"><h3>4. 商品名や料金から入らない</h3>
+      <p style="margin:0">全7社で共通していた順番。</p>
+      <ul><li>お客様の課題を聞き切る</li><li>AIでの見え方を実演する</li><li>「どうすれば出るか」を伝える</li><li>最後に料金を伝える（初回で料金を出さなかった例もある：01）</li></ul></div>
+    <div class="card"><h3>5. お客様の言葉を否定せず、整理する</h3>
+      <p style="margin:0">お客様が「地図検索で一番に出たい」「紹介を増やしたい」と答えを持っているときは、提案を足さずに「どちらも受注を増やすためですよね」と1本にまとめる（01）。</p></div>
+    <div class="card"><h3>6. 決裁者を早めに巻き込む</h3>
+      <p style="margin:0">初回の最後に「ご自身で決められますか」と聞き、決裁者が同席する次回を間を空けずに設定する（01は2日後、家族が同席）。</p></div>
+    <div class="card"><h3>7. 迷われたら押し込まない</h3>
+      <p style="margin:0">「まだ早い」と言われたら、質問に一つずつ答えて、お客様の実体験に話を戻す（05は1時間で「圧倒的にAIOです」に変わった）。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>C. 価格・クロージングの型</h2>
+  <div class="act">
+    <div class="card"><h3>1. 相場を先に伝えてから、今回の条件を伝える</h3>
+      <p style="margin:0">一般的には月30万円前後＋成果報酬、と先に伝えると、月3万円の安さが伝わる（04・05・07）。04の代表：「月3万円だと、取り組んでみようという気持ちになる」</p></div>
+    <div class="card"><h3>2. 最低1年の理由を正直に伝える</h3>
+      <p style="margin:0">「すぐに効果が出るものではない。ただ、やめても資産として残る」</p></div>
+    <div class="card"><h3>3. 未完成な部分は正直に伝える</h3>
+      <p style="margin:0">「完成しきったツールではない。使ってもらって一緒に改善したい」という言い方が信頼につながった（05）。</p></div>
+    <div class="card"><h3>4. やることが少ないと伝える</h3>
+      <p style="margin:0">「最初の診断チャットに答えるだけ。ホームページの修正は家族や今の業者でもいい」と言うと、手間への不安が消える（04・07）。</p></div>
+  </div>
+</section>
+
+<section class="tips">
+  <h2>D. 業種別の刺さりどころ</h2>
+  <div class="card"><ol>
+    <li><strong>工事・工務店・電気工事</strong>：入口は「見積もり依頼」。対策している競合が地域にほとんどいないので、先に動けば勝てる（01・06・07）。</li>
+    <li><strong>不動産</strong>：「相続→どう活用するか→どの業者に頼むか」という壁打ちの流れが描きやすい。高額で即決しないので、第三者の推薦が効く（02・04・05）。</li>
+    <li><strong>コンサル・士業</strong>：「AIに相談したあと、誰に相談すればいいか」で推薦される場面を見せる。「御社のクライアントにも必要になる」という視点も刺さる（03）。</li>
+  </ol></div>
+</section>
+
+<div class="note">出典：受注7社の商談の文字起こし、受注管理シート。社名・個人名・市区町村・競合名は伏せています。</div>
+
+</main>
+</body>
+</html>

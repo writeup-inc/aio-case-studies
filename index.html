@@ -47,6 +47,12 @@ body{margin:0;font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--ink);b
   .hero h1{font-size:24px}
   .frow .lbl{width:100%}
 }
+.kh{display:flex;align-items:center;gap:14px;margin-top:16px;background:var(--accent-soft);border:1px solid #f3c9ae;border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.kh:hover{box-shadow:0 6px 18px rgba(232,102,28,.15)}
+.kh-l{flex-shrink:0;font-weight:900;color:var(--accent)}
+.kh-t{flex:1;font-size:14px}
+.kh-a{font-weight:900;color:var(--accent)}
+@media (max-width:640px){.kh{flex-wrap:wrap}.kh-l{width:100%}}
 </style>
 </head>
 <body>
@@ -63,6 +69,8 @@ body{margin:0;font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--ink);b
     <div class="frow" id="f-ind"><span class="lbl">事業内容</span></div>
     <div class="frow" id="f-size"><span class="lbl">会社規模</span></div>
   </div>
+
+  <a class="kh" href="knowhow.html"><span class="kh-l">受注ノウハウまとめ</span><span class="kh-t">7社の商談から抜き出した、絶対に外せないキラーワード・行動・クロージングの型</span><span class="kh-a">→</span></a>
 
   <p class="count" id="count"></p>
   <div class="grid" id="grid"></div>
